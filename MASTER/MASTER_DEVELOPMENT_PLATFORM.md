@@ -21,12 +21,65 @@
 - 0.5 Historique des versions
 - 0.6 Conventions de lecture et de référencement
 
-### 1. Préambule
+## 1. Préambule
 
-- 1.1 Objet de la Constitution
-- 1.2 Engagement fondateur
-- 1.3 Périmètre couvert et exclusions explicites
-- 1.4 Relation avec l'écosystème documentaire HTD-DP
+### 1.1 Objet de la Constitution
+
+La présente Constitution définit les fondations de HTD Development Platform (HTD-DP), la plateforme de développement utilisée pour concevoir, développer, valider, documenter et faire évoluer les solutions de l'écosystème HTD.
+
+Elle établit le cadre commun qui gouverne la manière dont HTD développe ses technologies, organise ses connaissances, prend ses décisions et fait collaborer les développeurs humains et les agents IA.
+
+Son objectif est d'assurer que les méthodes, outils et technologies puissent évoluer au fil du temps sans perdre les principes fondamentaux, la cohérence, la traçabilité et les connaissances acquises.
+
+La Constitution constitue le niveau fondateur de HTD-DP. Les standards, processus, procédures, outils et implémentations qui en découlent doivent respecter ses principes et ses règles.
+
+Elle n'a pas pour fonction de définir les détails techniques d'un produit particulier. Elle définit plutôt le cadre durable dans lequel les produits, composants et technologies HTD peuvent être développés et évoluer.
+
+### 1.2 Engagement fondateur
+
+HTD Development Platform est construite avec l'engagement de développer l'écosystème HTD sur des fondations durables, compréhensibles, réutilisables et évolutives.
+
+Chaque développement doit contribuer non seulement au besoin immédiat qui l'a motivé, mais également à l'amélioration de la capacité de HTD à développer les projets futurs.
+
+HTD privilégie la compréhension avant l'implémentation, la réutilisation avant la duplication, la simplicité avant la complexité inutile et la validation avant le déploiement.
+
+Les outils, technologies et méthodes peuvent être remplacés ou améliorés avec le temps. Les connaissances acquises, les décisions validées et les principes fondamentaux doivent toutefois être conservés et transmis.
+
+Les agents IA peuvent participer activement à la conception, au développement, à l'analyse et à la documentation, mais l'autorité finale sur les décisions officielles de HTD demeure humaine.
+
+Cet engagement doit permettre à HTD-DP de progresser continuellement sans sacrifier la stabilité de ses fondations ni recommencer inutilement ce qui a déjà été compris, développé et validé.
+
+### 1.3 Périmètre couvert et exclusions explicites
+
+La Constitution de HTD Development Platform s'applique à l'ensemble des activités, méthodes et structures utilisées pour concevoir, développer, valider, documenter, maintenir et faire évoluer les solutions de l'écosystème HTD.
+
+Son périmètre couvre notamment les principes de développement, la gouvernance, les responsabilités, les processus de décision, les règles de développement, la gestion des connaissances, les composants universels, la collaboration entre humains et agents IA ainsi que les mécanismes de validation et d'évolution de HTD-DP.
+
+Elle s'applique aux développements logiciels, aux systèmes embarqués, aux systèmes industriels, aux interfaces, aux communications, aux outils de développement et, lorsque pertinent, aux développements matériels et technologiques réalisés dans l'écosystème HTD.
+
+La Constitution ne constitue toutefois pas une spécification technique détaillée des produits HTD. Les configurations particulières, schémas, paramètres, codes sources, procédures opérationnelles, essais détaillés et spécifications propres à un produit ou à un projet doivent être conservés dans les documents et dépôts appropriés.
+
+Elle ne doit pas être modifiée simplement pour suivre l'évolution d'un outil, d'un langage, d'un fournisseur ou d'une technologie particulière. Ces éléments appartiennent aux niveaux documentaires inférieurs lorsqu'ils ne remettent pas en cause les fondations de HTD-DP.
+
+Lorsqu'une nouvelle activité de développement apparaît dans l'écosystème HTD, elle doit autant que possible être intégrée au cadre existant plutôt que provoquer la création d'une méthode parallèle ou indépendante.
+
+### 1.4 Relation avec l'écosystème documentaire HTD-DP
+
+La Constitution constitue le document fondateur de l'écosystème documentaire de HTD Development Platform.
+
+Elle définit les principes, les responsabilités, les règles fondamentales et les mécanismes de gouvernance auxquels doivent se conformer les documents de niveau inférieur.
+
+L'écosystème documentaire de HTD-DP est organisé selon une hiérarchie permettant de séparer les fondations durables des éléments appelés à évoluer plus fréquemment :
+
+**Constitution → Standards et cadres → Processus et procédures → Outils et implémentations**
+
+Les documents de niveau inférieur peuvent préciser, appliquer et compléter les exigences établies par les niveaux supérieurs, mais ils ne peuvent les contredire.
+
+Les décisions officielles, connaissances acquises, retours d'expérience et éléments techniques doivent être conservés dans les espaces documentaires appropriés afin d'éviter de surcharger la Constitution avec des informations opérationnelles ou temporaires.
+
+Lorsqu'une contradiction est découverte entre un document subordonné et la Constitution, cette contradiction doit être identifiée, analysée et corrigée selon les mécanismes de gouvernance et de validation de HTD-DP.
+
+Cette organisation doit permettre à l'écosystème documentaire de grandir avec HTD tout en maintenant une source d'autorité claire, une traçabilité des décisions et une séparation entre les principes durables et leur mise en œuvre.
 
 ### 2. Vision et finalité
 
