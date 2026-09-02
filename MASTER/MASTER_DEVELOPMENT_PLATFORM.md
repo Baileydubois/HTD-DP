@@ -302,19 +302,206 @@ La philosophie d'ingénierie HTD doit ainsi permettre de concilier deux objectif
 Son application doit toujours servir la finalité générale de HTD-DP : faire de chaque développement une contribution à une plateforme progressivement plus capable, plus compréhensible et plus durable.
 
 
-### 3. Principes fondamentaux
 
-- 3.1 Nature et statut des principes
-- 3.2 Catalogue des principes
-  - 3.2.1 Comprendre avant de produire
-  - 3.2.2 Les outils évoluent. Les principes demeurent.
-  - 3.2.3 L'IA assiste, l'humain décide
-  - 3.2.4 Le laboratoire avant la production
-  - 3.2.5 Développer des développeurs
-  - 3.2.6 La réutilisation avant la duplication
-  - 3.2.7 Chaque développement doit améliorer le suivant
-- 3.3 Hiérarchie et résolution de conflits entre principes
-- 3.4 Application des principes dans la prise de décision
+
+
+
+## 3. Principes fondamentaux
+
+### 3.1 Nature et statut des principes
+
+Les principes fondamentaux constituent les règles directrices permanentes de HTD Development Platform.
+
+Ils servent de référence pour orienter les décisions d'architecture, de développement, de validation, de documentation et d'évolution de l'écosystème HTD.
+
+Contrairement aux technologies, outils, procédures et méthodes d'implémentation, les principes fondamentaux ne sont pas destinés à changer au rythme des évolutions techniques. Ils expriment les comportements et critères que HTD souhaite préserver indépendamment des technologies utilisées.
+
+Toute décision structurante prise dans HTD-DP doit être compatible avec ces principes. Lorsqu'une solution techniquement possible entre en contradiction avec un principe fondamental, cette contradiction doit être identifiée et justifiée avant que la solution puisse être considérée comme acceptable.
+
+Les principes fondamentaux ne remplacent pas l'analyse technique, l'expérimentation ou le jugement humain. Ils fournissent un cadre commun permettant d'assurer que ces activités demeurent cohérentes avec la vision à long terme de HTD.
+
+Un principe fondamental ne doit pas être modifié pour accommoder simplement un outil, un projet ou une difficulté temporaire. Son évolution doit correspondre à une remise en question réelle des fondations de HTD-DP et suivre le processus de modification constitutionnelle prévu par la présente Constitution.
+
+**Principe de gouvernance : les décisions évoluent dans le cadre des principes; les principes ne doivent pas évoluer au gré des décisions.**
+
+### 3.2 Catalogue des principes
+
+#### 3.2.1 Comprendre avant de produire
+
+Avant de construire, modifier ou automatiser un système, HTD doit chercher à comprendre suffisamment le problème, le fonctionnement existant, les contraintes et le résultat recherché.
+
+Le développement ne doit pas commencer par une solution simplement parce qu'elle est techniquement réalisable. Le besoin doit d'abord être défini et les hypothèses importantes doivent être identifiées.
+
+Lorsqu'un système existant est concerné, son comportement réel doit être observé et documenté autant que raisonnablement possible avant d'en modifier le fonctionnement ou d'en remplacer certaines parties.
+
+L'expérimentation fait partie du processus de compréhension. Un prototype peut être utilisé pour vérifier une hypothèse, mesurer un comportement ou découvrir une contrainte inconnue sans que ce prototype soit considéré automatiquement comme la solution définitive.
+
+Lorsqu'une information importante demeure inconnue, elle doit être traitée comme une **incertitude à résoudre** plutôt que transformée silencieusement en hypothèse considérée comme vraie.
+
+Cette discipline s'applique également au travail réalisé avec des agents IA : une réponse plausible, du code généré ou une proposition d'architecture ne constitue pas une validation en soi.
+
+Le niveau de compréhension requis doit demeurer proportionnel au risque et à l'importance de la décision. HTD ne cherche pas à tout connaître avant d'agir; elle cherche à comprendre suffisamment pour que l'action suivante soit maîtrisée et permette d'apprendre.
+
+**Principe directeur : « Comprendre suffisamment pour agir; expérimenter pour comprendre davantage; valider avant de considérer comme acquis. »**
+
+#### 3.2.2 Les outils évoluent. Les principes demeurent.
+
+Les outils utilisés par HTD sont des moyens au service du développement et ne constituent pas les fondations de l'écosystème.
+
+Langages, logiciels, plateformes, fournisseurs, équipements, services, agents IA et méthodes de travail peuvent évoluer, être remplacés ou disparaître. HTD-DP doit être conçue de manière à pouvoir absorber ces changements sans perdre ses principes, ses connaissances et ses capacités essentielles.
+
+Une décision architecturale durable ne doit donc pas dépendre inutilement des particularités d'un outil lorsque le besoin peut être représenté par une abstraction plus générale.
+
+HTD peut adopter un nouvel outil lorsqu'il apporte une valeur réelle, mais son adoption ne doit pas entraîner automatiquement la remise en question de fondations qui demeurent valides.
+
+De la même manière, un outil historique ne doit pas être conservé uniquement parce qu'il a déjà été utilisé. Lorsqu'une meilleure solution devient pertinente, HTD doit pouvoir effectuer une transition maîtrisée tout en préservant les connaissances et les comportements qui conservent leur valeur.
+
+La documentation doit autant que possible distinguer **le principe ou la capacité recherchée** de **l'outil actuellement utilisé pour la réaliser**.
+
+Cette séparation doit permettre à HTD de profiter des progrès technologiques sans devenir dépendante de leur permanence.
+
+**Principe directeur : « Les outils sont remplaçables. Les principes, les connaissances et les capacités durables doivent survivre à leur remplacement. »**
+
+#### 3.2.3 L'IA assiste, l'humain décide
+
+Les agents IA constituent des outils de développement capables de contribuer activement à l'analyse, à la conception, à la programmation, à la documentation, à la recherche de solutions et à la validation du travail réalisé dans HTD-DP.
+
+HTD doit exploiter ces capacités lorsqu'elles permettent d'améliorer la qualité, la rapidité, la compréhension ou l'efficacité du développement.
+
+Toutefois, la capacité d'un agent IA à proposer ou à exécuter une action ne lui confère pas automatiquement l'autorité de rendre cette action officielle.
+
+Les décisions structurantes concernant notamment les principes, l'architecture, la sécurité, la promotion de composants universels, les changements constitutionnels et le passage de développements vers des environnements opérationnels doivent demeurer sous autorité humaine selon les mécanismes de gouvernance applicables.
+
+Les résultats produits par une IA doivent être considérés selon leur niveau de preuve et de validation, et non selon la confiance apparente avec laquelle ils sont présentés.
+
+Un agent IA doit pouvoir signaler une incertitude, proposer plusieurs options, remettre en question une hypothèse ou recommander de ne pas poursuivre une action lorsqu'il existe un risque ou un manque d'information significatif.
+
+La contribution des agents IA doit autant que possible demeurer traçable afin qu'une décision importante puisse être comprise ultérieurement indépendamment de l'agent, du modèle ou du service qui a participé à sa création.
+
+HTD-DP ne doit pas dépendre de la permanence d'un fournisseur ou d'un modèle d'IA particulier. Les connaissances et décisions importantes produites avec leur assistance doivent devenir des actifs de HTD et non demeurer uniquement dans le contexte temporaire d'une conversation ou d'un agent.
+
+L'objectif n'est donc ni de limiter artificiellement l'IA ni de lui déléguer aveuglément le développement, mais de construire une collaboration dans laquelle **l'IA augmente les capacités humaines tandis que l'humain conserve l'autorité et la responsabilité des décisions officielles.**
+
+**Principe directeur : « L'IA peut analyser, proposer, construire et challenger. L'humain valide ce qui devient officiel. »**
+
+#### 3.2.4 Le laboratoire avant la production
+
+Toute nouvelle capacité HTD présentant une incertitude technique, un risque significatif ou un impact potentiel sur un système opérationnel doit être expérimentée et validée dans un environnement approprié avant son passage en production.
+
+Le laboratoire constitue l'espace où HTD peut explorer, mesurer, tester, échouer, modifier et recommencer sans compromettre inutilement la stabilité des systèmes opérationnels.
+
+Un prototype de laboratoire peut utiliser des solutions temporaires, des instruments supplémentaires ou des méthodes exploratoires lorsque celles-ci permettent d'acquérir les connaissances nécessaires. Ces éléments ne doivent toutefois pas être considérés automatiquement comme acceptables pour la production.
+
+Les comportements observés doivent être privilégiés aux comportements simplement supposés. Lorsque cela est raisonnablement possible, une validation doit donc reposer sur des essais représentatifs, des mesures et des résultats reproductibles.
+
+Un résultat positif isolé ne suffit pas nécessairement à démontrer qu'une solution est prête pour la production. Le niveau de validation requis doit être proportionnel au risque, à la criticité et aux conséquences possibles d'une défaillance.
+
+Les échecs rencontrés en laboratoire constituent des résultats utiles lorsqu'ils permettent de comprendre une limite, d'éliminer une hypothèse ou d'améliorer la solution. Les apprentissages significatifs doivent être conservés afin qu'ils puissent bénéficier aux développements futurs.
+
+Le passage du laboratoire vers la production doit constituer une décision explicite. Une expérimentation ne devient pas une solution opérationnelle simplement parce qu'elle fonctionne.
+
+Le laboratoire ne doit toutefois pas devenir un obstacle permanent au déploiement. Lorsqu'une solution possède un niveau de compréhension, de validation et de maîtrise suffisant pour son contexte d'utilisation, HTD doit pouvoir la faire progresser vers l'étape suivante.
+
+**Principe directeur : « Expérimenter librement. Mesurer réellement. Valider avant de produire. »**
+
+#### 3.2.5 Développer des développeurs
+
+HTD Development Platform doit contribuer à développer les capacités des personnes qui construisent, maintiennent et font évoluer l'écosystème HTD.
+
+Un système durable ne doit pas dépendre uniquement de la connaissance implicite de ses créateurs. Les raisonnements importants, les concepts, les décisions structurantes et les méthodes doivent pouvoir être compris et transmis.
+
+Le développement doit donc chercher non seulement à produire une solution fonctionnelle, mais également à rendre cette solution suffisamment compréhensible pour qu'un autre développeur puisse éventuellement l'analyser, la maintenir et la faire évoluer.
+
+HTD-DP doit favoriser l'apprentissage progressif. La documentation, les expérimentations, les retours d'expérience, les standards et la Knowledge Base doivent permettre aux nouveaux développeurs d'acquérir les connaissances nécessaires sans devoir reconstruire entièrement l'historique du projet.
+
+Les agents IA peuvent jouer un rôle important dans cette transmission en expliquant, contextualisant et rendant accessibles les connaissances de HTD. Ils ne doivent toutefois pas devenir l'unique endroit où cette connaissance existe.
+
+Le développement des compétences doit également inclure la capacité à remettre en question une solution, comprendre ses limites, expérimenter méthodiquement et prendre des décisions fondées sur des observations et des preuves.
+
+À mesure que HTD-DP progresse, elle doit donc produire deux résultats complémentaires : **des technologies plus capables et des développeurs plus capables de les comprendre et d'en construire les générations suivantes.**
+
+**Principe directeur : « Construire les systèmes et développer ceux qui pourront les faire évoluer. »**
+
+#### 3.2.6 La réutilisation avant la duplication
+
+Avant de créer une nouvelle fonction, méthode, composant ou mécanisme, HTD doit vérifier si une capacité existante peut répondre au besoin ou être raisonnablement étendue pour y répondre.
+
+Lorsqu'une capacité commune peut servir plusieurs projets, HTD doit privilégier son amélioration et sa réutilisation plutôt que la création de plusieurs variantes indépendantes réalisant essentiellement la même fonction.
+
+La duplication augmente le nombre d'éléments à comprendre, tester, maintenir, corriger et faire évoluer. Elle peut également entraîner progressivement des comportements différents entre des solutions qui avaient initialement le même objectif.
+
+La réutilisation ne signifie toutefois pas qu'un composant existant doit être imposé lorsqu'il ne répond plus correctement au besoin. Une extension excessive ou artificielle peut produire davantage de complexité qu'une nouvelle solution clairement séparée.
+
+Lorsqu'une duplication est nécessaire, sa raison doit être identifiable. Si plusieurs implémentations similaires apparaissent avec le temps, HTD doit évaluer si une capacité commune peut en être extraite.
+
+La réutilisation doit porter non seulement sur le code, mais également sur les connaissances, les architectures validées, les méthodes, les interfaces, les procédures d'essai et les composants matériels ou logiciels lorsque cela est pertinent.
+
+Une amélioration apportée à un composant partagé doit être évaluée selon son impact sur les autres systèmes qui l'utilisent afin que la réutilisation ne compromette pas leur stabilité.
+
+L'objectif n'est donc pas d'éliminer toute duplication, mais de prévenir la multiplication inutile de solutions parallèles et de faire converger les capacités communes lorsqu'une valeur réelle de réutilisation existe.
+
+**Principe directeur : « Réutiliser avant de reconstruire. Étendre avant de dupliquer. Séparer lorsque la différence est réelle. »**
+
+#### 3.2.7 Chaque développement doit améliorer le suivant
+
+Chaque développement réalisé dans HTD doit contribuer, lorsque cela est pertinent, à rendre les développements suivants plus efficaces, plus compréhensibles, plus fiables ou mieux maîtrisés.
+
+La réalisation d'un projet ne doit pas être considérée comme terminée uniquement parce que son objectif immédiat a été atteint. Les connaissances, méthodes, composants, erreurs, validations et décisions qui présentent une valeur future doivent pouvoir être identifiés et conservés.
+
+Un problème résolu une première fois doit devenir plus facile à résoudre lorsqu'il se présente de nouveau. Une erreur comprise doit réduire la probabilité qu'elle soit répétée. Une méthode validée doit pouvoir servir de point de départ plutôt que d'être redécouverte.
+
+Lorsqu'un développement révèle une faiblesse dans les méthodes, les outils, la documentation ou les composants communs de HTD-DP, cette faiblesse doit pouvoir alimenter leur amélioration.
+
+Les retours d'expérience doivent ainsi circuler des projets vers la plateforme de développement afin que HTD-DP progresse avec les systèmes qu'elle permet de construire.
+
+Cette amélioration cumulative ne signifie pas que chaque projet doit obligatoirement produire un nouveau composant universel ou modifier la plateforme. Certains développements peuvent simplement confirmer que les capacités existantes répondent correctement au besoin.
+
+La valeur doit être conservée au niveau approprié : connaissance dans la Knowledge Base, décision dans les mécanismes de traçabilité, amélioration dans un composant partagé, évolution dans un standard ou retour d'expérience dans la documentation correspondante.
+
+HTD-DP doit ainsi créer une boucle dans laquelle **les capacités de la plateforme améliorent les projets et l'expérience acquise dans les projets améliore à son tour la plateforme.**
+
+**Principe directeur : « Le prochain développement doit pouvoir commencer avec l'expérience du précédent. »**
+
+### 3.3 Hiérarchie et résolution de conflits entre principes
+
+Les principes fondamentaux de HTD-DP forment un ensemble cohérent et doivent normalement être appliqués conjointement plutôt qu'indépendamment.
+
+Aucun principe ne doit être interprété de manière isolée lorsqu'une décision importante implique plusieurs exigences ou objectifs concurrents.
+
+Lorsqu'une situation crée une tension entre plusieurs principes, HTD doit rechercher une solution permettant d'en respecter l'intention générale avec le moins de compromis possible.
+
+La sécurité, l'intégrité des systèmes et la maîtrise des risques ne doivent jamais être sacrifiées uniquement pour favoriser la rapidité, la simplicité ou la réutilisation.
+
+De même, la recherche d'universalité ou de réutilisation ne doit pas imposer une complexité disproportionnée, conformément au principe de simplicité maîtrisée.
+
+Lorsqu'un conflit réel ne peut être éliminé, la décision doit être fondée sur le contexte, les risques, les conséquences et les objectifs concernés. Pour une décision structurante, le compromis retenu et sa justification doivent être traçables.
+
+Un principe ne doit pas être déclaré inapplicable simplement parce qu'il rend une solution plus difficile à réaliser. Toute dérogation significative doit être explicitement identifiée et traitée conformément aux mécanismes de gouvernance prévus par HTD-DP.
+
+Lorsqu'un conflit révèle une ambiguïté ou une faiblesse dans les principes eux-mêmes, celui-ci doit être traité comme une question de gouvernance et non résolu par une modification improvisée de la Constitution.
+
+**Principe d'arbitrage : « Rechercher d'abord la solution qui respecte l'ensemble des principes; lorsque le compromis est inévitable, le comprendre, le justifier et le rendre traçable. »**
+
+### 3.4 Application des principes dans la prise de décision
+
+Les principes fondamentaux de HTD-DP doivent servir de cadre de référence lors des décisions ayant un impact significatif sur l'architecture, les méthodes, les composants, la sécurité, la maintenance ou l'évolution de l'écosystème HTD.
+
+Avant qu'une décision structurante soit considérée comme officielle, elle doit être examinée suffisamment pour déterminer si elle respecte les principes applicables et si elle introduit des conséquences susceptibles d'affecter les développements futurs.
+
+L'application des principes doit demeurer proportionnelle à l'importance de la décision. Une expérimentation temporaire et réversible ne nécessite pas le même niveau d'analyse qu'une décision destinée à devenir une fondation commune ou à être déployée dans plusieurs systèmes.
+
+Lorsqu'une décision présente plusieurs solutions possibles, les principes doivent aider à comparer les options au-delà de leur fonctionnement immédiat, notamment selon leur simplicité, leur réutilisabilité, leur compréhension, leur maintenabilité, leur capacité d'évolution et leur niveau de risque.
+
+Les décisions importantes doivent distinguer clairement les faits observés, les hypothèses, les incertitudes, les résultats expérimentaux et les choix finalement retenus.
+
+Lorsqu'un compromis avec un principe est nécessaire, celui-ci doit être explicite, justifié et conservé avec la décision afin qu'il puisse être compris et réévalué ultérieurement.
+
+Les agents IA peuvent analyser une décision, identifier des conflits, proposer des alternatives et vérifier sa cohérence avec la Constitution. Ils ne remplacent toutefois pas l'autorité humaine requise pour rendre officielle une décision qui relève de cette autorité.
+
+L'application des principes ne doit pas devenir une formalité documentaire. Elle doit améliorer réellement la qualité des décisions et permettre à HTD de comprendre, même plusieurs années plus tard, **pourquoi une solution a été retenue plutôt qu'une autre**.
+
+**Principe directeur : « Une décision durable doit pouvoir être comprise, justifiée et retracée. »**
+
 
 ### 4. Architecture conceptuelle de la plateforme
 
