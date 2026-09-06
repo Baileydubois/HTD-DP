@@ -301,6 +301,32 @@ def get_remote_diff(target, active_path, candidate_path):
     return run_ssh(target, command)
 
 
+def get_rollback_diff(
+    target,
+    active_path,
+    backup_path,
+):
+    quoted_active = shlex.quote(active_path)
+    quoted_backup = shlex.quote(backup_path)
+
+    command = (
+        "diff -u "
+        "--label ACTIVE "
+        "--label BACKUP "
+        f"{quoted_active} {quoted_backup}"
+    )
+
+    code, stdout, stderr = run_ssh(
+        target,
+        command,
+    )
+
+    if code not in (0, 1):
+        return code, stdout, stderr
+
+    return 0, stdout, ""
+
+
 def verify_before_apply(
     target,
     active_path,
@@ -382,6 +408,27 @@ def apply_candidate(
         "sudo sh -c "
         + shlex.quote(
             f"cat {quoted_candidate} > {quoted_active}"
+        )
+    )
+
+    return run_interactive_ssh(
+        target,
+        command,
+    )
+
+
+def rollback_backup(
+    target,
+    active_path,
+    backup_path,
+):
+    quoted_active = shlex.quote(active_path)
+    quoted_backup = shlex.quote(backup_path)
+
+    command = (
+        "sudo sh -c "
+        + shlex.quote(
+            f"cat {quoted_backup} > {quoted_active}"
         )
     )
 
@@ -507,6 +554,7 @@ def main():
 
     mode = "plan"
     local_candidate = None
+    rollback_path = None
 
     if len(sys.argv) == 4:
         if sys.argv[3] == "--backup":
@@ -523,6 +571,9 @@ def main():
         elif sys.argv[3] == "--apply":
             mode = "apply"
             local_candidate = sys.argv[4]
+        elif sys.argv[3] == "--rollback":
+            mode = "rollback"
+            rollback_path = sys.argv[4]
         else:
             print("[ERREUR] Option inconnue.")
             print_usage()
@@ -580,6 +631,135 @@ def main():
         print("Sauvegarde ciblée créée et vérifiée.")
         print("Le fichier actif n'a pas été modifié.")
         print()
+        print("=" * 60)
+        return 0
+
+    if mode == "rollback":
+        code, backup_info, error = get_remote_file_info(
+            target,
+            rollback_path,
+        )
+
+        if code != 0:
+            print("[ERREUR ROLLBACK]")
+            print("Backup introuvable ou inaccessible.")
+            if error:
+                print(error)
+            print("=" * 60)
+            return code
+
+        code, diff_output, diff_error = get_rollback_diff(
+            target,
+            remote_path,
+            rollback_path,
+        )
+
+        if code != 0:
+            print("[ERREUR DIFF ROLLBACK]")
+            print(diff_error or diff_output)
+            print("=" * 60)
+            return code
+
+        print("[ROLLBACK PRÉVU]")
+        print(f"Backup        : {rollback_path}")
+        print(f"SHA actif     : {original_info['sha256']}")
+        print(f"SHA backup    : {backup_info['sha256']}")
+        print()
+
+        print("[DIFF AVANT ROLLBACK]")
+
+        if diff_output:
+            print(diff_output)
+        else:
+            print("Aucune différence entre ACTIVE et BACKUP.")
+
+        print()
+
+        if original_info["sha256"] == backup_info["sha256"]:
+            print("[ARRÊT]")
+            print("Le fichier actif est déjà identique au backup.")
+            print("Aucun ROLLBACK nécessaire.")
+            print("=" * 60)
+            return 0
+
+        print("ATTENTION :")
+        print("La prochaine étape restaurera le contenu du backup")
+        print("dans le fichier actif.")
+        print("Une authentification sudo interactive sera requise.")
+        print()
+
+        confirmation = input(
+            "Pour autoriser le ROLLBACK, tape exactement ROLLBACK : "
+        )
+
+        if confirmation != "ROLLBACK":
+            print()
+            print("[ANNULÉ]")
+            print("Confirmation non reçue.")
+            print("Le fichier actif n'a pas été modifié.")
+            print("=" * 60)
+            return 0
+
+        print()
+        print("[ROLLBACK]")
+        print("Demande d'élévation sudo sur le HTD Edge...")
+
+        code = rollback_backup(
+            target,
+            remote_path,
+            rollback_path,
+        )
+
+        if code != 0:
+            print()
+            print("[ERREUR ROLLBACK]")
+            print(f"Code de retour : {code}")
+            print("L'état du fichier actif doit être vérifié.")
+            print("=" * 60)
+            return code
+
+        code, restored_info, error = get_remote_file_info(
+            target,
+            remote_path,
+        )
+
+        if code != 0:
+            print("[ERREUR POST-ROLLBACK]")
+            print(error)
+            print("=" * 60)
+            return code
+
+        print()
+        print("[POST-ROLLBACK]")
+        print(f"SHA backup    : {backup_info['sha256']}")
+        print(f"SHA actif     : {restored_info['sha256']}")
+        print(f"Propriétaire  : {restored_info['owner']} (UID {restored_info['uid']})")
+        print(f"Groupe        : {restored_info['group']} (GID {restored_info['gid']})")
+        print(f"Permissions   : {restored_info['mode']}")
+        print()
+
+        if restored_info["sha256"] != backup_info["sha256"]:
+            print("[ERREUR]")
+            print("Le fichier actif ne correspond pas au backup.")
+            print("=" * 60)
+            return 50
+
+        metadata_ok = (
+            restored_info["uid"] == original_info["uid"]
+            and restored_info["gid"] == original_info["gid"]
+            and restored_info["mode"] == original_info["mode"]
+        )
+
+        if not metadata_ok:
+            print("[ERREUR]")
+            print("Les métadonnées du fichier actif ont changé.")
+            print("=" * 60)
+            return 51
+
+        print("[RÉSULTAT]")
+        print("ROLLBACK terminé.")
+        print("Le contenu actif correspond au backup.")
+        print("UID, GID et permissions sont préservés.")
         print("=" * 60)
         return 0
 
@@ -785,7 +965,8 @@ def main():
     print("UID, GID et permissions sont préservés.")
     print(f"Backup de retour : {backup_path}")
     print()
-    print("VALIDATE métier et ROLLBACK restent à développer.")
+    print("VALIDATE métier reste à développer.")
+    print("ROLLBACK disponible avec --rollback <chemin_backup>.")
     print("=" * 60)
 
     return 0
