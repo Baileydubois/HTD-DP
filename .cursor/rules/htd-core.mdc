@@ -1,0 +1,14 @@
+---
+description: Règles opérationnelles HTD applicables au travail de Cursor dans ce dépôt.
+alwaysApply: true
+---
+
+Appliquer les règles officielles définies dans :
+
+@CURSOR/HTD_CURSOR_RULES.md
+
+Ces règles constituent la source opérationnelle officielle pour l'utilisation de Cursor dans ce dépôt.
+
+Ne pas recopier, redéfinir ou maintenir une version parallèle de ces règles dans ce fichier.
+
+En cas de contradiction ou d'incertitude, respecter la hiérarchie d'autorité définie dans HTD_CURSOR_RULES.md.
