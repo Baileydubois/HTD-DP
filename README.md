@@ -65,7 +65,7 @@ La relation est directe : HTD-DP produit et fait évoluer HTD Platform. Comprend
 
 ## Philosophie
 
-Les principes fondateurs de HTD-DP sont ceux du **Master Development Platform**. Ils guident l'ensemble des décisions et des pratiques du projet.
+Les principes fondateurs de HTD-DP sont ceux du **Master Development Platform**, formalisés dans la Constitution officielle `MASTER/HTD_DEVELOPMENT_CONSTITUTION.md`. Ils guident l'ensemble des décisions et des pratiques du projet.
 
 - Comprendre avant de produire.
 - Les outils évoluent. Les principes demeurent.
@@ -75,7 +75,7 @@ Les principes fondateurs de HTD-DP sont ceux du **Master Development Platform**.
 - La réutilisation avant la duplication.
 - Chaque développement doit améliorer le suivant.
 
-Le Master Development Platform en expose le sens et l'application. Ce document n'en reprend que l'essentiel.
+La Constitution en expose le sens et l'application. Ce document n'en reprend que l'essentiel.
 
 ---
 
@@ -85,7 +85,21 @@ Ce README est la porte d'entrée officielle de HTD Development Platform.
 
 Il s'adresse à toute personne ou tout agent rejoignant le projet : développeur humain, agent IA, architecte ou collaborateur futur.
 
-Il pose le cadre. L'architecture détaillée, les processus et les spécifications sont documentés ailleurs.
+Il pose le cadre. L'architecture détaillée, les processus et les spécifications sont documentés ailleurs ; les documents d'autorité actuellement en vigueur sont identifiés ci-dessous.
+
+---
+
+## Documents officiels
+
+- Constitution : `MASTER/HTD_DEVELOPMENT_CONSTITUTION.md`
+- Convention du HTD Dev Agent : `DEV_AGENT/HTD_DEV_AGENT_CONVENTION.md`
+- HTD Cursor Rules : `CURSOR/HTD_CURSOR_RULES.md`
+
+La configuration Cursor `.cursor/rules/htd-core.mdc` applique les HTD Cursor Rules. Elle n'est pas une source d'autorité autonome.
+
+Hiérarchie applicable :
+
+**HTD Development Constitution → HTD Dev Agent Convention → HTD Cursor Rules → travail effectué avec Cursor**
 
 ---
 
@@ -93,4 +107,6 @@ Il pose le cadre. L'architecture détaillée, les processus et les spécificatio
 
 Document de cadrage — première page du projet HTD-DP.
 
-Ce README ne décrit ni les technologies retenues, ni la feuille de route, ni les spécifications techniques. Ces éléments feront l'objet de documents dédiés, une fois les décisions correspondantes prises.
+Les documents d'autorité et d'opération Cursor existent aux chemins indiqués ci-dessus.
+
+Ce README ne décrit ni les technologies retenues, ni la feuille de route, ni les spécifications techniques. Ces éléments demeurent hors de ce fichier.
