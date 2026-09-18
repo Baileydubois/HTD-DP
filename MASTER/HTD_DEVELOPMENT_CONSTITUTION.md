@@ -6,7 +6,7 @@
 |---|---|
 | **Statut** | Constitution officielle |
 | **Version** | 1.0.0 |
-| **Date** | 2026-08-07 |
+| **Date** | 2026-09-18 |
 
 ---
 
@@ -14,12 +14,70 @@
 
 ### 0. Métadonnées et statut du document
 
-- 0.1 Identité et titre officiel
-- 0.2 Statut constitutionnel
-- 0.3 Autorité, portée et limites
-- 0.4 Public visé
-- 0.5 Historique des versions
-- 0.6 Conventions de lecture et de référencement
+-   0.1 Identité et titre officiel
+-   0.2 Statut constitutionnel
+-   0.3 Autorité, portée et limites
+-   0.4 Public visé
+-   0.5 Historique des versions
+-   0.6 Conventions de lecture et de référencement
+
+## 0. Métadonnées et statut du document
+
+### 0.1 Identité et titre officiel
+
+Le présent document constitue la **HTD Development Constitution**, Constitution officielle de HTD Development Platform (HTD-DP).
+
+Son titre, son statut, sa version et sa date doivent permettre d'identifier sans ambiguïté la version de référence utilisée à un moment donné.
+
+**Principe directeur : « Une Constitution officielle doit être identifiable sans ambiguïté. »**
+
+### 0.2 Statut constitutionnel
+
+La Constitution constitue le niveau fondateur de l'écosystème documentaire de HTD-DP.
+
+Elle établit les principes, responsabilités, règles de gouvernance et mécanismes essentiels auxquels les documents et implémentations subordonnés doivent demeurer compatibles.
+
+Son statut constitutionnel ne transforme pas chaque formulation en procédure opérationnelle détaillée. Les moyens d'application doivent être définis au niveau documentaire approprié.
+
+**Principe directeur : « La Constitution fixe les fondations; les niveaux subordonnés organisent leur application. »**
+
+### 0.3 Autorité, portée et limites
+
+L'autorité de la Constitution s'applique à HTD Development Platform et aux activités de développement gouvernées par celle-ci.
+
+Elle ne remplace pas les spécifications propres aux produits, les exigences réglementaires applicables, les mécanismes de sécurité des systèmes opérationnels ni l'autorité humaine requise pour les décisions qui en relèvent.
+
+Aucun outil, agent, processus ou document subordonné ne peut modifier implicitement sa portée ou son autorité.
+
+**Principe directeur : « L'autorité constitutionnelle encadre le développement sans absorber les autorités qui appartiennent aux systèmes, aux domaines ou aux humains responsables. »**
+
+### 0.4 Public visé
+
+La Constitution s'adresse à toute personne, agent IA, rôle de gouvernance ou mécanisme de développement appelé à participer de manière significative à HTD-DP.
+
+Sa rédaction doit demeurer suffisamment générale et compréhensible pour survivre aux changements d'outils, de technologies et d'organisation.
+
+**Principe directeur : « Toute personne ou capacité participant durablement à HTD-DP doit pouvoir comprendre les fondations qui gouvernent son travail. »**
+
+### 0.5 Historique des versions
+
+Chaque version officielle de la Constitution doit être identifiable et traçable.
+
+Les modifications significatives doivent permettre de comprendre ce qui a changé, pourquoi le changement a été adopté et à partir de quelle version il s'applique.
+
+L'historique ne doit pas devenir une seconde Constitution : il documente l'évolution de l'autorité sans remplacer le texte en vigueur.
+
+**Principe directeur : « Conserver l'histoire des fondations sans créer plusieurs sources concurrentes d'autorité. »**
+
+### 0.6 Conventions de lecture et de référencement
+
+Les numéros de chapitres et de sections constituent les références stables du document.
+
+Les termes normatifs doivent être interprétés dans le contexte de l'ensemble de la Constitution. Les principes directeurs résument l'intention d'une section sans remplacer son contenu.
+
+Lorsqu'un document subordonné référence la Constitution, il doit autant que possible identifier la section concernée plutôt que reproduire inutilement son contenu.
+
+**Principe directeur : « Référencer l'autorité à sa source et interpréter chaque règle dans la cohérence de l'ensemble. »**
 
 ## 1. Préambule
 
@@ -81,7 +139,6 @@ Lorsqu'une contradiction est découverte entre un document subordonné et la Con
 
 Cette organisation doit permettre à l'écosystème documentaire de grandir avec HTD tout en maintenant une source d'autorité claire, une traçabilité des décisions et une séparation entre les principes durables et leur mise en œuvre.
 
-
 ## 2. Vision et finalité
 
 ### 2.1 Vision à long terme
@@ -106,13 +163,15 @@ HTD-DP organise le développement afin que les connaissances, les décisions, le
 
 Elle a notamment pour mission de :
 
-- structurer les méthodes de développement de HTD;
-- favoriser la création et la réutilisation de composants universels;
-- assurer la traçabilité des décisions et des validations;
-- organiser et préserver les connaissances acquises;
-- encadrer la collaboration entre développeurs humains et agents IA;
-- fournir un environnement permettant l'expérimentation avant l'intégration aux systèmes opérationnels;
-- permettre l'amélioration continue des méthodes, composants et capacités de développement.
+-   structurer les méthodes de développement de HTD;
+-   favoriser la création et la réutilisation de composants universels;
+-   assurer la traçabilité des décisions et des validations;
+-   organiser et préserver les connaissances acquises;
+-   encadrer la collaboration entre développeurs humains et agents IA;
+-   fournir un environnement permettant l'expérimentation avant
+l'intégration aux systèmes opérationnels;
+-   permettre l'amélioration continue des méthodes, composants et
+capacités de développement.
 
 HTD-DP ne cherche donc pas seulement à produire des solutions. Elle vise à améliorer continuellement **la capacité de HTD à produire les solutions suivantes**.
 
@@ -284,12 +343,17 @@ La philosophie d'ingénierie HTD doit guider les décisions prises tout au long 
 
 Avant d'introduire une nouvelle architecture, fonction, composant ou méthode, le développement doit notamment considérer les questions suivantes :
 
-- Existe-t-il déjà une capacité HTD pouvant répondre au besoin?
-- Le besoin est-il spécifique à ce projet ou représente-t-il une capacité potentiellement réutilisable?
-- La solution proposée introduit-elle une complexité réellement nécessaire?
-- Les dépendances envers un équipement, un fournisseur, un protocole ou une technologie peuvent-elles être isolées?
-- La solution pourra-t-elle être comprise, testée, maintenue et remplacée?
-- Quelles connaissances ou capacités produites par ce développement pourront bénéficier aux projets futurs?
+-   Existe-t-il déjà une capacité HTD pouvant répondre au besoin?
+-   Le besoin est-il spécifique à ce projet ou représente-t-il une
+capacité potentiellement réutilisable?
+-   La solution proposée introduit-elle une complexité réellement
+nécessaire?
+-   Les dépendances envers un équipement, un fournisseur, un protocole
+ou une technologie peuvent-elles être isolées?
+-   La solution pourra-t-elle être comprise, testée, maintenue et
+remplacée?
+-   Quelles connaissances ou capacités produites par ce développement
+pourront bénéficier aux projets futurs?
 
 Ces questions constituent un cadre de réflexion et non un mécanisme destiné à ralentir systématiquement le développement. Leur niveau d'application doit demeurer proportionnel à l'importance, au risque et à la portée de la décision.
 
@@ -300,11 +364,6 @@ Lorsqu'une solution spécifique permet de répondre rapidement à un besoin exp�
 La philosophie d'ingénierie HTD doit ainsi permettre de concilier deux objectifs : **avancer suffisamment rapidement pour apprendre et expérimenter, tout en construisant suffisamment rigoureusement pour conserver ce qui mérite de durer.**
 
 Son application doit toujours servir la finalité générale de HTD-DP : faire de chaque développement une contribution à une plateforme progressivement plus capable, plus compréhensible et plus durable.
-
-
-
-
-
 
 ## 3. Principes fondamentaux
 
@@ -502,155 +561,925 @@ L'application des principes ne doit pas devenir une formalité documentaire. Ell
 
 **Principe directeur : « Une décision durable doit pouvoir être comprise, justifiée et retracée. »**
 
+## 4. Architecture conceptuelle de la plateforme
 
-### 4. Architecture conceptuelle de la plateforme
+### 4.1 Modèle conceptuel de HTD-DP
 
-- 4.1 Modèle conceptuel de HTD-DP
-- 4.2 Couches de gouvernance documentaire
-  - 4.2.1 Constitution (niveau fondateur)
-  - 4.2.2 Standards et cadres (niveau normatif)
-  - 4.2.3 Processus et procédures (niveau opérationnel)
-  - 4.2.4 Outils et implémentations (niveau technique)
-- 4.3 Règles de délégation entre niveaux
-- 4.4 Frontières entre plateforme de développement et produits développés
+HTD Development Platform constitue le cadre commun dans lequel l'écosystème HTD organise ses activités de développement, ses connaissances, ses règles, ses méthodes, ses outils et ses mécanismes de validation.
 
-### 5. Gouvernance et responsabilités
+HTD-DP n'est ni un logiciel unique, ni un agent IA particulier, ni un dépôt Git, ni un ensemble figé d'outils. Elle constitue un **système de développement organisé** dont les implémentations peuvent évoluer.
 
-- 5.1 Modèle de gouvernance
-- 5.2 Rôles et acteurs
-  - 5.2.1 Développeurs humains
-  - 5.2.2 Agents IA
-  - 5.2.3 Architectes et responsables de domaine
-  - 5.2.4 Autorités de validation
-- 5.3 Matrice des responsabilités
-- 5.4 Pouvoirs de décision et limites
-- 5.5 Obligations de chaque acteur
-- 5.6 Escalade et arbitrage
+Son modèle repose sur six fonctions complémentaires : **gouverner, comprendre, développer, valider, capitaliser et faire évoluer**. Ces fonctions peuvent être réalisées par des humains, des agents IA, des outils logiciels, des environnements de laboratoire, des dépôts documentaires ou d'autres moyens appropriés.
 
-### 6. Règles de développement
+HTD-DP doit maintenir une séparation claire entre l'autorité, la connaissance, les méthodes de travail, les outils utilisés et les systèmes développés. Un outil ne devient pas une autorité parce qu'il peut exécuter une action; une information ne devient pas officielle parce qu'elle existe; un système ne devient pas une composante de HTD-DP simplement parce qu'il a été développé au moyen de celle-ci.
 
-- 6.1 Statut et portée des règles
-- 6.2 Règles transversales
-  - 6.2.1 Qualité et cohérence
-  - 6.2.2 Réutilisation et modularité
-  - 6.2.3 Gestion de la dette technique
-  - 6.2.4 Sécurité, intégrité et traçabilité
-- 6.3 Règles du laboratoire
-- 6.4 Règles de passage en production
-- 6.5 Règles d'évolution des composants
-- 6.6 Exceptions, dérogations et conditions d'acceptation
+Les produits et systèmes HTD peuvent fournir à HTD-DP des observations et retours d'expérience. Ceux-ci peuvent ensuite améliorer les connaissances, méthodes, standards et composants communs.
 
-### 7. Workflow officiel de développement
+La boucle conceptuelle est :
 
-- 7.1 Objectif et périmètre du workflow
-- 7.2 Processus officiel de prise de décision
-  - 7.2.1 Idée
-  - 7.2.2 Hypothèses
-  - 7.2.3 Analyse
-  - 7.2.4 Prototype
-  - 7.2.5 Validation
-  - 7.2.6 Décision officielle
-  - 7.2.7 Documentation
-  - 7.2.8 Implémentation
-  - 7.2.9 Retour d'expérience
-  - 7.2.10 Intégration à la Knowledge Base
-- 7.3 Cycle de vie officiel de développement
-  - 7.3.1 Exploration et compréhension
-  - 7.3.2 Conception et cadrage
-  - 7.3.3 Développement en laboratoire
-  - 7.3.4 Validation et revue
-  - 7.3.5 Intégration et déploiement
-  - 7.3.6 Exploitation et amélioration continue
-- 7.4 Points de contrôle obligatoires
-- 7.5 Gestion des changements
-  - 7.5.1 Changements mineurs
-  - 7.5.2 Changements majeurs
-  - 7.5.3 Changements constitutionnels
-- 7.6 Conditions de passage entre étapes
-- 7.7 Traçabilité des décisions et des artefacts
+**Gouverner → Comprendre → Développer → Valider → Capitaliser → Faire évoluer**
 
-### 8. Gestion des connaissances et de l'apprentissage
+Cette boucle peut être répétée ou ramenée à une étape antérieure lorsque de nouvelles informations l'exigent.
 
-- 8.1 Politique de connaissance et d'apprentissage
-- 8.2 Architecture de la connaissance HTD-DP
-- 8.3 Capture, structuration et conservation
-  - 8.3.1 Conservation des décisions officielles
-  - 8.3.2 Conservation des retours d'expérience
-  - 8.3.3 Conservation du savoir technique et organisationnel
-- 8.4 Apprentissage et transmission
-  - 8.4.1 Apprentissage des développeurs humains
-  - 8.4.2 Apprentissage et contextualisation des agents IA
-  - 8.4.3 Onboarding et montée en compétence
-- 8.5 Knowledge Base officielle
-- 8.6 Actualisation, obsolescence et archivage
-- 8.7 Accessibilité et discoverability
-- 8.8 Contribution à l'amélioration continue de l'écosystème
+**Principe directeur : « HTD-DP n'est pas un outil de développement; elle est le cadre qui organise comment HTD comprend, développe, valide et améliore ses technologies. »**
 
-### 9. Composants universels HTD
+### 4.2 Couches de gouvernance documentaire
 
-- 9.1 Statut et objectif stratégique
-- 9.2 Philosophie des composants universels
-- 9.3 Critères d'éligibilité à l'universalité
-- 9.4 Règles de réutilisation
-- 9.5 Gouvernance des composants
-  - 9.5.1 Rôles et responsabilités
-  - 9.5.2 Processus de promotion au statut universel
-  - 9.5.3 Autorité de validation et de retrait
-- 9.6 Cycle de vie d'un composant
-  - 9.6.1 Conception et cadrage
-  - 9.6.2 Développement et validation
-  - 9.6.3 Publication et adoption
-  - 9.6.4 Évolution et maintenance
-  - 9.6.5 Dépréciation et retrait
-- 9.7 Bibliothèques communes
-- 9.8 Composants partagés entre projets
-- 9.9 Critères de dépréciation
-- 9.10 Règles de compatibilité
-  - 9.10.1 Versionnement
-  - 9.10.2 Compatibilité ascendante et descendante
-  - 9.10.3 Migration et coexistence
+HTD-DP organise sa documentation selon plusieurs niveaux d'autorité afin de distinguer les fondations durables des règles, méthodes et implémentations appelées à évoluer plus fréquemment.
 
-### 10. Collaboration humain–agent IA
+La hiérarchie est :
 
-- 10.1 Modèle de collaboration officiel
-- 10.2 Répartition des tâches et des responsabilités
-- 10.3 Règles d'interaction et de supervision
-- 10.4 Contraintes et garde-fous applicables aux agents
-- 10.5 Traçabilité des contributions mixtes
-- 10.6 Gestion des erreurs, des biais et des limites
+**Constitution → Standards et cadres → Processus et procédures → Outils et implémentations**
 
-### 11. Validation et conformité
+Chaque niveau doit respecter les exigences des niveaux supérieurs. Une contradiction doit être corrigée au niveau approprié; le niveau supérieur prévaut jusqu'à sa résolution.
 
-- 11.1 Cadre de validation
-- 11.2 Critères de conformité constitutionnelle
-- 11.3 Types de validation
-  - 11.3.1 Validation technique
-  - 11.3.2 Validation documentaire
-  - 11.3.3 Validation de gouvernance
-  - 11.3.4 Validation des décisions officielles
-  - 11.3.5 Validation des composants universels
-- 11.4 Revues obligatoires
-- 11.5 Non-conformité, remédiation et blocage
-- 11.6 Preuves, attestations et auditabilité
+La position d'un document dépend de la nature et de l'autorité de son contenu, et non simplement de son nom, de son emplacement ou de l'outil qui l'a créé.
 
-### 12. Évolution de la plateforme
+#### 4.2.1 Constitution (niveau fondateur)
 
-- 12.1 Principe d'amélioration continue
-- 12.2 Boucle d'amélioration de HTD-DP
-- 12.3 Processus de modification de la Constitution
-  - 12.3.1 Proposition
-  - 12.3.2 Examen et impact
-  - 12.3.3 Approbation
-  - 12.3.4 Publication et entrée en vigueur
-- 12.4 Évolution des standards, processus et outils
-- 12.5 Migration, compatibilité et rétroactivité
-- 12.6 Indicateurs de maturité et de santé de la plateforme
+La Constitution constitue le niveau d'autorité documentaire le plus élevé de HTD-DP. Elle définit les principes fondamentaux, responsabilités générales et mécanismes essentiels qui doivent demeurer valides indépendamment des technologies utilisées.
 
-### 13. Dispositions finales
+Elle ne doit pas contenir inutilement les détails qui peuvent être définis à un niveau inférieur. Sa modification doit correspondre à une évolution réelle des fondations de HTD-DP.
 
-- 13.1 Interprétation officielle
-- 13.2 Entrée en vigueur
-- 13.3 Primauté de la Constitution
-- 13.4 Glossaire
-- 13.5 Index des principes, règles et workflows
-- 13.6 Références et documents subordonnés
+#### 4.2.2 Standards et cadres (niveau normatif)
+
+Les standards et cadres traduisent les principes constitutionnels en exigences applicables à un domaine, une responsabilité ou une catégorie d'activité.
+
+Ils peuvent définir notamment des conventions, architectures de référence, exigences de sécurité ou responsabilités spécialisées. Ils peuvent évoluer plus fréquemment que la Constitution, mais doivent toujours demeurer compatibles avec elle.
+
+#### 4.2.3 Processus et procédures (niveau opérationnel)
+
+Les processus et procédures définissent comment les exigences supérieures sont appliquées dans les activités concrètes de développement.
+
+Ils peuvent préciser des séquences de travail, contrôles, validations, conditions de passage et méthodes de revue. Ils doivent pouvoir évoluer lorsque l'expérience démontre qu'une meilleure méthode existe, sans créer implicitement une autorité nouvelle.
+
+#### 4.2.4 Outils et implémentations (niveau technique)
+
+Les outils et implémentations constituent le niveau où les principes, standards et processus sont appliqués au moyen des technologies disponibles.
+
+Ils peuvent comprendre logiciels, scripts, configurations, règles d'outils, agents IA et mécanismes d'automatisation. Leur comportement ne constitue pas à lui seul une règle officielle. Lorsqu'une implémentation révèle qu'une règle supérieure doit évoluer, cette évolution doit être effectuée au niveau documentaire approprié.
+
+**Principe directeur : « L'autorité descend dans la hiérarchie; l'expérience et les apprentissages peuvent remonter pour améliorer les niveaux supérieurs. »**
+
+### 4.3 Règles de délégation entre niveaux
+
+Un niveau supérieur définit principalement **ce qui doit être respecté**; un niveau inférieur peut définir plus précisément **comment l'exigence est appliquée**.
+
+La délégation ne transfère pas l'autorité du document supérieur. Un document subordonné peut préciser une exigence, définir ses méthodes d'application et ajouter des règles compatibles propres à son domaine. Il ne peut contredire une exigence supérieure, supprimer implicitement une protection, étendre son autorité, transformer une exception locale en règle générale ou modifier une fondation par simple usage.
+
+Lorsqu'une pratique répétée doit acquérir une autorité durable, elle doit être intégrée officiellement au niveau documentaire approprié.
+
+Les modifications doivent être effectuées au **niveau le plus bas capable de répondre correctement au besoin**, tout en remontant lorsqu'elles affectent réellement une règle ou un principe supérieur.
+
+**Principe directeur : « Déléguer l'application sans déléguer implicitement l'autorité; modifier la règle au niveau où elle appartient. »**
+
+### 4.4 Frontières entre plateforme de développement et produits développés
+
+HTD-DP et les systèmes développés au moyen de celle-ci demeurent conceptuellement distincts.
+
+HTD-DP fournit le cadre, les connaissances, méthodes, outils et mécanismes de validation. Les produits, plateformes, équipements et composants développés sont les résultats de ces activités et peuvent devenir des systèmes opérationnels.
+
+Une capacité de développement ne devient pas automatiquement une fonction produit, et une fonction produit ne devient pas automatiquement une composante de HTD-DP. Tout transfert doit être explicite, compris, validé et documenté.
+
+Les fonctions critiques de sécurité, de protection et de contrôle déterministe des systèmes opérationnels doivent conserver l'autorité attribuée par leur architecture. Elles ne doivent pas dépendre d'un outil de développement ou d'un agent IA pour assurer leur fonction essentielle.
+
+La boucle générale est :
+
+**HTD-DP → développe et valide → systèmes HTD → exploitent et produisent de l'expérience → HTD-DP**
+
+**Principe directeur : « HTD-DP construit les capacités; les systèmes HTD les exploitent. L'expérience circule entre les deux, mais leurs autorités et responsabilités demeurent distinctes. »**
+
+## 5. Gouvernance et responsabilités
+
+### 5.1 Modèle de gouvernance
+
+La gouvernance de HTD-DP repose sur la séparation entre **capacité d'agir, autorité de décider et validation des résultats**.
+
+Un acteur peut disposer des moyens techniques pour réaliser une action sans avoir l'autorité de la rendre officielle. De même, une décision autorisée n'est pas nécessairement validée techniquement tant que les preuves requises n'ont pas été obtenues.
+
+La gouvernance doit rester proportionnelle au risque, à la portée et à la réversibilité des décisions afin de protéger les fondations sans ralentir inutilement les activités simples.
+
+**Principe directeur : « La capacité permet d'agir; l'autorité détermine qui peut décider; la validation détermine ce qui peut devenir officiel. »**
+
+### 5.2 Rôles et acteurs
+
+HTD-DP peut faire intervenir plusieurs catégories d'acteurs. Les responsabilités doivent être attribuées selon la nature du travail et non selon un outil particulier.
+
+#### 5.2.1 Développeurs humains
+
+Les développeurs humains apportent jugement, contexte, connaissance du procédé et capacité de validation du monde réel. Ils peuvent concevoir, expérimenter, développer, vérifier et décider dans les limites de leur autorité.
+
+Les décisions officielles qui exigent une autorité humaine demeurent sous responsabilité humaine, particulièrement lorsque leurs conséquences sont structurantes, critiques ou physiques.
+
+#### 5.2.2 Agents IA
+
+Les agents IA peuvent analyser, proposer, générer, modifier, comparer, tester et documenter dans les limites qui leur sont accordées.
+
+Ils doivent distinguer les faits observés, hypothèses, inférences, propositions, actions exécutées et validations réellement obtenues. Leur capacité technique ne leur confère pas automatiquement une autorité décisionnelle.
+
+#### 5.2.3 Architectes et responsables de domaine
+
+Les architectes et responsables de domaine assurent la cohérence des décisions relevant de leur domaine, notamment les interfaces, responsabilités, contraintes et conséquences transversales.
+
+Leur rôle peut être exercé par une ou plusieurs personnes selon la maturité et l'organisation de HTD. Il ne doit pas devenir un titre artificiel lorsque la responsabilité peut être assumée clairement autrement.
+
+#### 5.2.4 Autorités de validation
+
+Une autorité de validation est l'acteur habilité à accepter officiellement un résultat, une décision ou un passage d'étape lorsque cette acceptation est requise.
+
+L'autorité doit être appropriée à la nature de la validation. Une validation logicielle, documentaire, architecturale ou physique peut exiger des preuves et responsabilités différentes.
+
+**Principe directeur : « Les rôles définissent les responsabilités; l'autorité définit les décisions permises; les preuves déterminent ce qui peut être validé. »**
+
+### 5.3 Matrice des responsabilités
+
+Pour toute activité significative, HTD-DP doit permettre d'identifier qui propose, qui peut exécuter, qui vérifie, qui valide et qui rend une décision officielle lorsque ces responsabilités sont distinctes.
+
+Une matrice formelle n'est pas obligatoire pour chaque tâche. Le niveau de formalisation doit être proportionnel à l'impact du travail.
+
+Les responsabilités ne doivent pas devenir ambiguës simplement parce qu'un même acteur peut cumuler plusieurs rôles.
+
+**Principe directeur : « Toute action importante doit avoir des responsabilités identifiables; toute décision officielle doit avoir une autorité identifiable. »**
+
+### 5.4 Pouvoirs de décision et limites
+
+L'autorité accordée doit être suffisante pour permettre un travail efficace tout en restant proportionnelle au risque et aux conséquences possibles.
+
+Les actions réversibles, bien comprises et vérifiables peuvent être davantage déléguées. Les décisions irréversibles, structurantes, critiques ou susceptibles de produire des conséquences physiques significatives exigent un niveau de contrôle plus élevé.
+
+Une limite d'autorité doit être considérée comme une frontière de décision, non comme une limitation de la capacité à analyser ou proposer.
+
+**Principe directeur : « Accorder suffisamment d'autorité pour agir efficacement, mais jamais davantage que ce que le contexte, le risque et la responsabilité permettent de maîtriser. »**
+
+### 5.5 Obligations de chaque acteur
+
+Tout acteur participant à HTD-DP doit comprendre suffisamment le contexte avant d'agir, respecter les autorités applicables, rendre visibles les incertitudes significatives et préserver les éléments valides qui ne doivent pas être modifiés.
+
+Il doit produire ou conserver les preuves nécessaires à la compréhension des changements importants et signaler les limites de ce qui a réellement été vérifié.
+
+Lorsqu'une action révèle une connaissance durable, celle-ci doit pouvoir être capitalisée au niveau approprié.
+
+**Principe directeur : « Exercer son autorité avec compréhension, rendre l'incertitude visible et laisser derrière soi un état plus compréhensible que celui trouvé. »**
+
+### 5.6 Escalade et arbitrage
+
+Une question doit être escaladée lorsqu'elle dépasse l'autorité disponible, lorsqu'une incertitude significative empêche une décision maîtrisée ou lorsqu'un conflit entre exigences ne peut être résolu au niveau courant.
+
+L'escalade doit viser le niveau le plus proche disposant de l'autorité et de la compréhension nécessaires. Elle ne doit pas devenir un réflexe bureaucratique pour les décisions simples.
+
+Les arbitrages structurants doivent conserver suffisamment de contexte pour que leur justification puisse être comprise et réévaluée.
+
+**Principe directeur : « Escalader lorsqu'une décision dépasse l'autorité ou la certitude disponible; arbitrer au niveau le plus proche possédant l'autorité nécessaire; conserver l'apprentissage produit par la décision. »**
+
+## 6. Règles de développement
+
+### 6.1 Statut et portée des règles
+
+Les règles de développement traduisent les principes de la Constitution en exigences générales applicables aux activités de HTD-DP.
+
+Leur application doit être proportionnelle au risque, à la maturité et à la portée du développement. Une expérimentation locale et réversible ne nécessite pas le même niveau de formalisation qu'une modification destinée à plusieurs systèmes opérationnels.
+
+**Principe directeur : « Des règles suffisamment fortes pour protéger les fondations, suffisamment proportionnées pour permettre d'expérimenter et suffisamment générales pour survivre aux outils qui les appliquent. »**
+
+### 6.2 Règles transversales
+
+Les règles transversales s'appliquent indépendamment du langage, de l'outil ou du type de système lorsque leur objet est pertinent.
+
+#### 6.2.1 Qualité et cohérence
+
+Une solution de qualité doit fonctionner, mais aussi demeurer suffisamment compréhensible, testable, maintenable et cohérente avec les responsabilités du système.
+
+La qualité doit être évaluée selon le contexte réel et non selon une recherche abstraite de perfection.
+
+**Principe directeur : « Faire fonctionner est nécessaire; comprendre, préserver et pouvoir faire évoluer fait partie de la qualité. »**
+
+#### 6.2.2 Réutilisation et modularité
+
+HTD doit réutiliser les capacités communes lorsqu'elles répondent réellement au besoin et isoler les éléments qui varient.
+
+La modularité doit servir la compréhension, le remplacement et l'évolution; elle ne doit pas produire une fragmentation artificielle. Une généralisation doit être justifiée par une valeur réelle de réutilisation.
+
+**Principe directeur : « Réutiliser ce qui est réellement commun; isoler ce qui varie; ne généraliser que lorsque l'expérience démontre la valeur de le faire. »**
+
+#### 6.2.3 Gestion de la dette technique
+
+HTD reconnaît qu'une décision peut volontairement privilégier la rapidité d'apprentissage ou la simplicité immédiate au détriment d'une solution définitive.
+
+Une dette technique est acceptable lorsqu'elle est comprise, proportionnelle et ne compromet pas les exigences essentielles de sécurité, d'intégrité ou de validation. Lorsqu'elle est significative, sa limitation, sa raison et ses conséquences doivent être suffisamment visibles.
+
+Une solution temporaire ne doit pas devenir implicitement permanente parce qu'elle fonctionne. À mesure qu'un développement gagne en maturité, ses dettes doivent être réévaluées.
+
+Toutes les dettes n'ont pas besoin d'être éliminées. Leur correction doit être priorisée selon le risque, le coût, l'impact futur et la difficulté croissante de résolution.
+
+**Principe directeur : « Accepter consciemment la dette qui permet d'apprendre ou d'avancer; rendre visible celle qui compte; corriger celle qui finit par coûter davantage que sa résolution. »**
+
+#### 6.2.4 Sécurité, intégrité et traçabilité
+
+Tout développement doit préserver un niveau de sécurité, d'intégrité et de traçabilité proportionnel aux conséquences possibles.
+
+Les fonctions critiques de sécurité doivent autant que possible demeurer déterministes, compréhensibles et vérifiables. Un agent IA ou un outil de développement ne doit pas devenir implicitement la dernière barrière lorsqu'une protection déterministe est nécessaire.
+
+Les interlocks, permissifs, arrêts et limites ne doivent pas être contournés simplement pour faciliter un test. L'intégrité exige également que les modifications ne compromettent pas silencieusement les données, interfaces, états connus ou comportements validés.
+
+La traçabilité significative doit permettre de comprendre ce qui a été modifié, pourquoi, avec quelle autorité, quelles validations et quelles limites.
+
+**Principe directeur : « Protéger ce qui peut être affecté, préserver ce qui est déjà maîtrisé et conserver suffisamment de preuves pour comprendre ce qui s'est réellement produit. »**
+
+### 6.3 Règles du laboratoire
+
+Le laboratoire est l'environnement privilégié pour explorer les capacités comportant une incertitude ou un risque qui ne doit pas être transféré prématurément à la production.
+
+Il permet d'échouer, de mesurer et de recommencer. Les solutions temporaires y sont acceptables lorsqu'elles servent l'apprentissage et que leurs limites sont comprises.
+
+Un succès en laboratoire démontre seulement ce qui a réellement été testé dans les conditions observées.
+
+**Principe directeur : « Le laboratoire permet d'échouer pour apprendre; il ne permet pas de confondre expérimentation réussie et solution prête pour la production. »**
+
+### 6.4 Règles de passage en production
+
+Le passage en production doit constituer une décision explicite fondée sur un niveau de compréhension et de validation approprié au contexte réel d'utilisation.
+
+Les interfaces, dépendances, comportements critiques, mécanismes de récupération et protections nécessaires doivent être suffisamment maîtrisés.
+
+Une validation numérique ne remplace pas une validation physique lorsque l'affirmation dépend du comportement réel d'un équipement ou d'un procédé.
+
+**Principe directeur : « Le laboratoire démontre ce qui peut fonctionner; le passage en production exige de démontrer que la capacité est suffisamment maîtrisée pour l'environnement où elle devra réellement fonctionner. »**
+
+### 6.5 Règles d'évolution des composants
+
+Un composant doit pouvoir évoluer lorsque le besoin le justifie sans provoquer inutilement la reconstruction des éléments qui demeurent valides.
+
+Les impacts sur les interfaces, dépendances et utilisateurs existants doivent être évalués selon l'importance du changement. Une rupture peut être acceptable lorsqu'elle est nécessaire, explicite et accompagnée d'une transition appropriée.
+
+**Principe directeur : « Faire évoluer ce qui doit changer, préserver ce qui demeure valide et maîtriser les conséquences de chaque rupture nécessaire. »**
+
+### 6.6 Exceptions, dérogations et conditions d'acceptation
+
+Une exception peut être acceptée lorsqu'une règle générale ne répond pas correctement à une situation particulière et que les conséquences sont comprises.
+
+Une dérogation significative doit être identifiable, autorisée au niveau approprié et limitée à son contexte. Sa répétition peut indiquer que la règle générale doit être réexaminée.
+
+**Principe directeur : « Une exception doit rester exceptionnelle, comprise et autorisée; lorsqu'elle devient normale, c'est la règle elle-même qui doit être réexaminée. »**
+
+## 7. Workflow officiel de développement
+
+### 7.1 Objectif et périmètre du workflow
+
+Le workflow officiel fournit une structure commune pour faire progresser une idée vers une capacité comprise, validée, intégrée et susceptible de produire un apprentissage durable.
+
+Il n'impose pas une séquence rigide à toutes les tâches. Les étapes peuvent être proportionnées, regroupées ou répétées selon le contexte, à condition de ne pas supprimer les contrôles nécessaires.
+
+**Principe directeur : « Le workflow structure la progression sans la rigidifier : comprendre où nous sommes, démontrer ce qui permet d'avancer et revenir en arrière lorsque l'apprentissage l'exige. »**
+
+### 7.2 Processus officiel de prise de décision
+
+Le processus de décision distingue la naissance d'une idée, son analyse, sa validation et son éventuelle officialisation.
+
+#### 7.2.1 Idée
+
+Une idée peut provenir d'un besoin, d'une observation, d'un problème, d'une possibilité technique ou d'un apprentissage.
+
+Elle doit pouvoir être explorée librement sans être confondue avec une décision officielle.
+
+**Principe directeur : « Une idée doit pouvoir naître librement; elle ne devient une direction qu'après avoir été suffisamment comprise et décidée. »**
+
+#### 7.2.2 Hypothèses
+
+Les suppositions nécessaires à l'exploration doivent être rendues explicites lorsqu'elles peuvent influencer significativement la décision.
+
+**Principe directeur : « Transformer l'idée en hypothèses explicites afin de savoir ce qui est supposé et ce qui doit encore être démontré. »**
+
+#### 7.2.3 Analyse
+
+L'analyse examine les faits disponibles, contraintes, risques, interfaces, alternatives et incertitudes pertinentes.
+
+Elle doit être proportionnelle à la portée de la décision.
+
+**Principe directeur : « Examiner les faits, contraintes, risques et incertitudes avant d'engager le développement. »**
+
+#### 7.2.4 Prototype
+
+Le prototype construit suffisamment de réalité pour tester les hypothèses et apprendre sans imposer prématurément une architecture définitive.
+
+**Principe directeur : « Construire suffisamment pour apprendre et vérifier les hypothèses sans transformer prématurément l'essai en solution définitive. »**
+
+#### 7.2.5 Validation
+
+La validation compare les résultats observés aux affirmations ou exigences réellement visées.
+
+Les limites des essais doivent rester visibles.
+
+**Principe directeur : « Ne considérer comme démontré que ce que les essais, mesures et observations permettent réellement d'affirmer. »**
+
+#### 7.2.6 Décision officielle
+
+Une décision devient officielle lorsqu'elle est explicitement acceptée par l'autorité appropriée sur la base d'un niveau de compréhension et de preuve suffisant.
+
+**Principe directeur : « Transformer les résultats suffisamment compris et validés en décision explicite prise par l'autorité appropriée. »**
+
+#### 7.2.7 Documentation
+
+Les décisions, preuves, limites et connaissances significatives doivent être conservées au niveau approprié.
+
+**Principe directeur : « Conserver les décisions, preuves et connaissances nécessaires pour comprendre ce qui a été décidé et pourquoi. »**
+
+#### 7.2.8 Implémentation
+
+L'implémentation réalise la décision dans les limites de sa portée. Elle ne doit pas étendre implicitement l'autorité ou l'objectif approuvé.
+
+**Principe directeur : « Mettre en œuvre la décision officielle de manière maîtrisée sans étendre implicitement sa portée. »**
+
+#### 7.2.9 Retour d'expérience
+
+Les résultats réels de l'implémentation doivent pouvoir confirmer, corriger ou enrichir les hypothèses et décisions antérieures.
+
+**Principe directeur : « Utiliser les résultats réels de l'implémentation pour confirmer, corriger ou enrichir la compréhension acquise. »**
+
+#### 7.2.10 Intégration à la Knowledge Base
+
+Les apprentissages possédant une valeur future doivent être intégrés à la connaissance durable de HTD au niveau approprié.
+
+**Principe directeur : « Transformer les apprentissages durables en connaissances réutilisables afin que HTD ne doive pas les redécouvrir. »**
+
+### 7.3 Cycle de vie officiel de développement
+
+Le cycle de vie organise la progression technique d'une capacité, de sa compréhension initiale à son amélioration continue.
+
+#### 7.3.1 Exploration et compréhension
+
+Le besoin, l'état existant, les contraintes et les inconnues doivent être compris suffisamment avant une modification significative.
+
+**Principe directeur : « Comprendre suffisamment le besoin, l'état existant et les contraintes avant de modifier ce qui existe. »**
+
+#### 7.3.2 Conception et cadrage
+
+La conception définit la responsabilité de la solution, ses interfaces, sa portée et les critères permettant de juger son résultat.
+
+**Principe directeur : « Concevoir la solution la plus simple qui répond correctement au besoin tout en respectant les fondations et contraintes applicables. »**
+
+#### 7.3.3 Développement en laboratoire
+
+La construction doit progresser de manière maîtrisée, avec des changements suffisamment limités pour rester compréhensibles et vérifiables.
+
+**Principe directeur : « Construire de manière maîtrisée, en limitant les changements à ce qui est nécessaire et en préservant ce qui demeure valide. »**
+
+#### 7.3.4 Validation et revue
+
+Les essais et revues appropriés doivent démontrer les comportements revendiqués et identifier les limites restantes.
+
+**Principe directeur : « Vérifier le comportement obtenu avec des preuves adaptées au risque et ne déclarer validé que ce qui a réellement été démontré. »**
+
+#### 7.3.5 Intégration et déploiement
+
+Une capacité validée doit être intégrée progressivement en maîtrisant ses interfaces, dépendances et risques de régression.
+
+**Principe directeur : « Intégrer progressivement une capacité validée en maîtrisant ses interfaces, ses dépendances et les risques de régression. »**
+
+#### 7.3.6 Exploitation et amélioration continue
+
+L'exploitation produit des observations qui doivent pouvoir enrichir la compréhension et déclencher un nouveau cycle lorsque nécessaire.
+
+**Principe directeur : « Transformer les résultats, erreurs et observations en connaissances permettant au prochain cycle de commencer avec une meilleure compréhension. »**
+
+### 7.4 Points de contrôle obligatoires
+
+Un point de contrôle doit être placé lorsqu'une erreur, une décision insuffisamment comprise ou une absence de preuve deviendrait significativement plus coûteuse, risquée ou difficile à corriger après l'étape suivante.
+
+Les points de contrôle doivent être proportionnels au risque et ne pas devenir des formalités sans valeur.
+
+**Principe directeur : « Placer les contrôles là où une erreur ou une mauvaise décision deviendrait significativement plus coûteuse, risquée ou difficile à corriger après le passage à l'étape suivante. »**
+
+### 7.5 Gestion des changements
+
+Tout changement doit être traité selon sa portée, ses conséquences et sa réversibilité.
+
+#### 7.5.1 Changements mineurs
+
+Un changement mineur est limité, compris et suffisamment réversible pour être traité avec un contrôle allégé.
+
+**Principe directeur : « Permettre les changements limités et maîtrisés avec un niveau de contrôle proportionnel, sans leur imposer inutilement le processus d'un changement majeur. »**
+
+#### 7.5.2 Changements majeurs
+
+Un changement majeur affecte de manière significative une architecture, une interface, un comportement partagé, une exigence, une sécurité ou plusieurs systèmes.
+
+Il exige une compréhension, une validation et une autorité proportionnées à sa portée.
+
+**Principe directeur : « Traiter comme majeur tout changement dont la portée ou les conséquences exigent une compréhension, une validation et une autorité renforcées avant son intégration. »**
+
+#### 7.5.3 Changements constitutionnels
+
+Un changement constitutionnel modifie une fondation de HTD-DP et doit suivre le processus prévu au chapitre 12.
+
+**Principe directeur : « Modifier une fondation constitutionnelle uniquement lorsqu'elle doit réellement évoluer, par une décision explicite de l'autorité appropriée et avec une trace de ce qui change et pourquoi. »**
+
+### 7.6 Conditions de passage entre étapes
+
+Une étape peut être franchie lorsque les preuves, la compréhension, les validations et les autorisations nécessaires sont suffisantes pour le risque de l'étape suivante.
+
+Une nouvelle incertitude significative peut justifier un retour en arrière.
+
+**Principe directeur : « Avancer lorsque les preuves et la compréhension nécessaires sont suffisantes; revenir en arrière lorsqu'une incertitude importante réapparaît. »**
+
+### 7.7 Traçabilité des décisions et des artefacts
+
+La progression du workflow doit laisser suffisamment de traces pour relier les décisions, changements, validations et artefacts significatifs.
+
+La traçabilité doit servir la compréhension et la reconstruction des décisions, sans imposer une documentation disproportionnée.
+
+**Principe directeur : « Conserver suffisamment de traces pour comprendre ce qui a été décidé, réalisé, vérifié et appris sans transformer le développement en bureaucratie. »**
+
+## 8. Gestion des connaissances et de l'apprentissage
+
+### 8.1 Politique de connaissance et d'apprentissage
+
+HTD-DP doit transformer l'expérience acquise en connaissances durables plutôt que de dépendre uniquement de la mémoire d'une personne, d'un agent ou d'un outil.
+
+Une connaissance doit être conservée lorsqu'elle possède une valeur raisonnable pour la compréhension, la décision, le diagnostic, la réutilisation ou les développements futurs.
+
+**Principe directeur : « Transformer l'expérience de HTD en connaissances durables, retrouvables et réutilisables plutôt que dépendre de la mémoire d'une personne, d'un agent ou d'un outil. »**
+
+### 8.2 Architecture de la connaissance HTD-DP
+
+La connaissance doit être conservée à l'endroit correspondant à sa nature et à son autorité : Constitution, standards, décisions, spécifications, résultats d'essais, documentation technique, dépôts ou Knowledge Base.
+
+L'architecture doit éviter qu'une information temporaire devienne une source d'autorité parallèle.
+
+**Principe directeur : « Conserver ce qui possède une valeur future au niveau où sa nature, son autorité et son contexte peuvent rester compréhensibles. »**
+
+### 8.3 Capture, structuration et conservation
+
+La capture de connaissance doit préserver autant que nécessaire sa source, son contexte, son niveau de preuve et sa relation avec les décisions ou systèmes concernés.
+
+#### 8.3.1 Conservation des décisions officielles
+
+Une décision officielle significative doit pouvoir être retrouvée avec suffisamment de contexte pour comprendre son objet, son autorité et sa justification.
+
+**Principe directeur : « Conserver les décisions officielles avec suffisamment de contexte pour comprendre ce qui a été décidé, par quelle autorité et pourquoi. »**
+
+#### 8.3.2 Conservation des retours d'expérience
+
+Les observations, réussites, échecs, limitations et corrections ayant une valeur future doivent pouvoir être conservés sans transformer chaque événement mineur en documentation permanente.
+
+**Principe directeur : « Préserver les observations, réussites, échecs et apprentissages qui peuvent éviter de redécouvrir ce qui a déjà été appris. »**
+
+#### 8.3.3 Conservation du savoir technique et organisationnel
+
+Le savoir nécessaire à la compréhension et à la continuité de HTD doit progressivement devenir accessible au-delà de la personne ou de l'agent qui l'a acquis.
+
+**Principe directeur : « Transformer le savoir utile en connaissance durable de HTD plutôt que de le laisser dépendre d'une personne, d'un agent ou d'un contexte temporaire. »**
+
+### 8.4 Apprentissage et transmission
+
+HTD-DP doit permettre aux acteurs futurs de bénéficier des connaissances déjà acquises et de comprendre leur niveau de confiance.
+
+#### 8.4.1 Apprentissage des développeurs humains
+
+Les connaissances doivent être présentées de manière à permettre une montée progressive en compréhension, incluant les raisons des décisions et les limites des solutions.
+
+**Principe directeur : « Rendre les connaissances de HTD suffisamment accessibles et compréhensibles pour développer progressivement les capacités humaines. »**
+
+#### 8.4.2 Apprentissage et contextualisation des agents IA
+
+Les agents IA doivent pouvoir recevoir un contexte HTD structuré et pertinent. Ce contexte doit distinguer autant que possible les faits, décisions officielles, hypothèses, historiques et informations obsolètes.
+
+**Principe directeur : « Fournir aux agents IA un contexte HTD structuré et traçable sans confondre information disponible, connaissance validée et autorité décisionnelle. »**
+
+#### 8.4.3 Onboarding et montée en compétence
+
+L'onboarding doit permettre à un nouvel acteur de découvrir progressivement les fondations, responsabilités, méthodes et connaissances pertinentes sans reconstruire l'historique complet de HTD.
+
+**Principe directeur : « Permettre à un nouvel acteur de comprendre progressivement les fondations, méthodes et connaissances nécessaires sans devoir reconstruire l'histoire de HTD. »**
+
+### 8.5 Knowledge Base officielle
+
+La Knowledge Base officielle rassemble les connaissances durables qui ne relèvent pas directement d'un document normatif ou d'une spécification particulière.
+
+Elle doit préserver les distinctions entre connaissance validée, observation, hypothèse et information historique. Elle ne remplace pas la Constitution ni les autres sources d'autorité.
+
+**Principe directeur : « La Knowledge Base conserve la connaissance réutilisable sans devenir une autorité parallèle aux documents qui gouvernent HTD-DP. »**
+
+### 8.6 Actualisation, obsolescence et archivage
+
+Une connaissance doit pouvoir être corrigée, enrichie, marquée obsolète ou archivée lorsque de meilleures preuves apparaissent ou que son contexte disparaît.
+
+L'évolution doit préserver suffisamment d'historique pour comprendre les décisions anciennes lorsqu'il demeure pertinent.
+
+**Principe directeur : « Une connaissance doit pouvoir être corrigée, enrichie ou remplacée lorsque de meilleures preuves apparaissent, tout en conservant suffisamment de trace pour comprendre son évolution. »**
+
+### 8.7 Accessibilité et discoverability
+
+La connaissance utile doit être organisée de façon à pouvoir être retrouvée par les acteurs autorisés sans exiger qu'ils connaissent déjà son emplacement exact.
+
+L'accessibilité ne signifie pas que toute information doit être exposée à tous les acteurs; elle doit respecter les limites de sécurité et d'autorité applicables.
+
+**Principe directeur : « Une connaissance conservée n'a de valeur opérationnelle que si les acteurs autorisés peuvent raisonnablement la retrouver, l'identifier et comprendre son contexte. »**
+
+### 8.8 Contribution à l'amélioration continue de l'écosystème
+
+Les connaissances accumulées doivent pouvoir améliorer les méthodes, standards, composants, outils et décisions futures.
+
+Une découverte locale ne doit remonter vers une règle commune que lorsque sa valeur générale est suffisamment démontrée.
+
+**Principe directeur : « Les connaissances accumulées doivent améliorer les projets suivants ainsi que les méthodes, composants et capacités communes de HTD. »**
+
+## 9. Composants universels HTD
+
+### 9.1 Statut et objectif stratégique
+
+Un composant universel HTD représente une capacité commune destinée à être réutilisée dans plusieurs systèmes ou projets.
+
+Son statut implique une responsabilité accrue de stabilité, de compréhension et de gouvernance parce que ses changements peuvent produire des conséquences transversales.
+
+**Principe directeur : « Un composant devient universel lorsqu'il représente une capacité réellement commune et suffisamment stable pour être réutilisée dans plusieurs systèmes HTD. »**
+
+### 9.2 Philosophie des composants universels
+
+HTD privilégie la réutilisation de capacités communes sans imposer l'universalité comme objectif à toute fonction.
+
+Un composant universel doit réduire la duplication et augmenter la cohérence sans créer une abstraction disproportionnée.
+
+**Principe directeur : « Généraliser seulement ce dont la valeur transversale est démontrée; ne pas transformer une possibilité théorique de réutilisation en abstraction obligatoire. »**
+
+### 9.3 Critères d'éligibilité à l'universalité
+
+Une capacité peut être candidate lorsqu'elle répond à un besoin commun, possède une responsabilité suffisamment stable, des interfaces maîtrisables et une valeur de réutilisation démontrée.
+
+La possibilité théorique de réutilisation ne suffit pas.
+
+**Principe directeur : « Promouvoir ce qui est réellement commun, compris et réutilisable plutôt que ce qui pourrait seulement le devenir. »**
+
+### 9.4 Règles de réutilisation
+
+Les projets doivent privilégier un composant universel lorsqu'il répond correctement au besoin. Ils peuvent s'en écarter lorsqu'une différence réelle le justifie.
+
+Une adaptation ne doit pas déformer artificiellement un composant commun pour lui faire supporter des responsabilités incompatibles.
+
+**Principe directeur : « Réutiliser les composants communs lorsqu'ils répondent au besoin, tout en permettant aux projets de s'en écarter lorsqu'une différence réelle et justifiée l'exige. »**
+
+### 9.5 Gouvernance des composants
+
+La gouvernance doit protéger la valeur commune du composant sans bloquer son évolution.
+
+#### 9.5.1 Rôles et responsabilités
+
+Les responsabilités d'évolution, de validation, de publication et de retrait doivent être suffisamment identifiables.
+
+**Principe directeur : « Tout composant universel doit avoir des responsabilités de gouvernance suffisamment claires pour que son évolution, sa validation et son maintien ne deviennent pas implicites. »**
+
+#### 9.5.2 Processus de promotion au statut universel
+
+La promotion doit être explicite et fondée sur l'expérience, la réutilisabilité démontrée et un niveau de validation adapté.
+
+**Principe directeur : « Promouvoir une capacité au statut universel seulement lorsque sa valeur transversale est démontrée et que son niveau de maîtrise permet raisonnablement sa réutilisation. »**
+
+#### 9.5.3 Autorité de validation et de retrait
+
+Le statut universel doit être accordé ou retiré par l'autorité appropriée en tenant compte des preuves et des dépendances existantes.
+
+**Principe directeur : « L'adoption ou le retrait du statut universel doit résulter d'une décision explicite de l'autorité appropriée fondée sur des preuves et les conséquences pour les systèmes concernés. »**
+
+### 9.6 Cycle de vie d'un composant
+
+#### 9.6.1 Conception et cadrage
+
+La conception doit isoler la responsabilité commune des particularités du projet d'origine.
+
+**Principe directeur : « Concevoir un composant universel autour d'une responsabilité commune clairement délimitée plutôt qu'autour des particularités du premier projet qui l'utilise. »**
+
+#### 9.6.2 Développement et validation
+
+Le développement doit démontrer que le composant remplit sa responsabilité dans les contextes réellement revendiqués et rendre visibles ses hypothèses.
+
+**Principe directeur : « Démontrer qu'un composant commun remplit sa responsabilité et peut être réutilisé sans transférer silencieusement les hypothèses de son contexte d'origine. »**
+
+#### 9.6.3 Publication et adoption
+
+Un composant publié doit être suffisamment identifiable, documenté et versionné pour permettre une adoption maîtrisée.
+
+**Principe directeur : « Rendre un composant universel suffisamment identifiable, compréhensible et utilisable pour permettre son adoption maîtrisée par les projets HTD. »**
+
+#### 9.6.4 Évolution et maintenance
+
+L'évolution doit considérer les utilisateurs existants, les interfaces et les risques de régression.
+
+**Principe directeur : « Faire évoluer un composant partagé en tenant compte de l'ensemble de ses utilisateurs et en préservant autant que possible les comportements qui demeurent valides. »**
+
+#### 9.6.5 Dépréciation et retrait
+
+Un composant devenu inadéquat peut être déprécié puis retiré. Son statut doit être explicite et les dépendances connues doivent disposer d'une transition raisonnable lorsque nécessaire.
+
+**Principe directeur : « Retirer progressivement une capacité devenue inadéquate en rendant son statut explicite et en permettant une transition maîtrisée lorsque des dépendances existent. »**
+
+### 9.7 Bibliothèques communes
+
+Les bibliothèques communes regroupent des composants dont la réutilisation bénéficie à plusieurs projets.
+
+Elles doivent faciliter la découverte et l'utilisation sans devenir un dépôt indifférencié de fonctions historiques.
+
+**Principe directeur : « Une bibliothèque commune doit rendre les capacités partagées plus faciles à trouver, comprendre, utiliser et faire évoluer. »**
+
+### 9.8 Composants partagés entre projets
+
+Une capacité peut être partagée entre quelques projets sans nécessairement acquérir immédiatement le statut universel.
+
+Cette étape peut servir à démontrer sa valeur transversale avant une promotion éventuelle.
+
+**Principe directeur : « Permettre le partage pragmatique entre projets sans confondre réutilisation locale et statut universel. »**
+
+### 9.9 Critères de dépréciation
+
+La dépréciation peut être justifiée lorsqu'un composant ne répond plus adéquatement aux besoins, présente une dette ou un risque excessif, est remplacé par une capacité supérieure ou empêche l'évolution de l'écosystème.
+
+Elle ne signifie pas un retrait immédiat.
+
+**Principe directeur : « Déprécier lorsqu'une capacité ne doit plus être choisie pour l'avenir; retirer lorsque ses dépendances peuvent être abandonnées ou migrées de manière maîtrisée. »**
+
+### 9.10 Règles de compatibilité
+
+La compatibilité doit être gérée comme une propriété à préserver lorsqu'elle apporte une valeur réelle, et non comme une interdiction permanente de changement.
+
+#### 9.10.1 Versionnement
+
+Les versions doivent permettre d'identifier les comportements et interfaces utilisés par les projets.
+
+**Principe directeur : « Identifier suffisamment les évolutions d'un composant pour permettre aux projets de savoir quelle définition et quels comportements ils utilisent. »**
+
+#### 9.10.2 Compatibilité ascendante et descendante
+
+La compatibilité doit être maintenue lorsqu'elle est raisonnable, mais une rupture explicitement gérée peut être préférable à une complexité permanente.
+
+**Principe directeur : « Préserver la compatibilité lorsqu'elle apporte une valeur raisonnable, sans empêcher une évolution nécessaire uniquement pour maintenir indéfiniment des comportements anciens. »**
+
+#### 9.10.3 Migration et coexistence
+
+Lorsqu'une rupture est nécessaire, HTD doit prévoir une migration adaptée au risque et, lorsque pertinent, une coexistence temporaire entre générations.
+
+**Principe directeur : « Lorsqu'une rupture est nécessaire, permettre autant que raisonnablement possible une migration maîtrisée et, lorsque pertinent, une coexistence temporaire entre générations. »**
+
+## 10. Collaboration humain–agent IA
+
+### 10.1 Modèle de collaboration officiel
+
+HTD-DP combine le jugement, le contexte et l'autorité humaine avec les capacités d'analyse, de génération, de recherche et d'automatisation des agents IA.
+
+La collaboration doit chercher à augmenter la capacité globale de développement sans confondre capacité technique et autorité décisionnelle.
+
+**Principe directeur : « Combiner le jugement, l'autorité et la connaissance du contexte humain avec les capacités d'analyse, de génération et d'automatisation de l'IA, sans confondre leurs responsabilités. »**
+
+### 10.2 Répartition des tâches et des responsabilités
+
+Les tâches doivent être réparties selon les capacités disponibles, le risque, la réversibilité, l'autorité et les moyens de validation.
+
+Une séparation rigide entre tâches humaines et tâches IA n'est pas nécessaire lorsque la responsabilité et les contrôles restent clairs.
+
+**Principe directeur : « Répartir les tâches selon les capacités, l'autorité, le risque et les moyens de validation disponibles plutôt que selon une séparation rigide entre humain et IA. »**
+
+### 10.3 Règles d'interaction et de supervision
+
+La supervision humaine doit se concentrer sur les décisions, ambiguïtés et conséquences significatives.
+
+Les opérations suffisamment maîtrisées et vérifiables peuvent être automatisées afin d'éviter une intervention humaine sans valeur ajoutée.
+
+**Principe directeur : « Superviser prioritairement les décisions et conséquences qui comptent, tout en permettant l'automatisation des opérations suffisamment maîtrisées et vérifiables. »**
+
+### 10.4 Contraintes et garde-fous applicables aux agents
+
+Les agents doivent respecter les limites d'autorité, les protections, les environnements et les règles applicables à leur tâche.
+
+Ils ne doivent pas contourner implicitement un mécanisme de sécurité, officialiser une décision qui exige une autorité humaine ou présenter une validation non réalisée comme acquise.
+
+**Principe directeur : « Accorder aux agents suffisamment de capacité pour être utiles sans leur permettre de dépasser implicitement l'autorité, les protections ou les limites applicables à leur contexte. »**
+
+### 10.5 Traçabilité des contributions mixtes
+
+Les contributions humaines et IA significatives doivent laisser suffisamment de traces pour comprendre l'origine d'une décision, les modifications produites et les validations obtenues.
+
+La traçabilité ne doit pas exiger l'enregistrement exhaustif de chaque interaction sans valeur future.
+
+**Principe directeur : « Conserver suffisamment de trace des contributions humaines et IA pour comprendre l'origine, la validation et l'autorité des décisions significatives. »**
+
+### 10.6 Gestion des erreurs, des biais et des limites
+
+Les résultats d'un agent IA doivent être évalués selon les preuves disponibles et non selon leur apparence de certitude.
+
+Les erreurs, biais possibles, informations manquantes et limites de contexte doivent être rendus visibles lorsqu'ils peuvent modifier une décision significative.
+
+**Principe directeur : « Traiter les résultats d'un agent selon les preuves disponibles et rendre visibles les incertitudes, erreurs et limites susceptibles d'affecter une décision. »**
+
+## 11. Validation et conformité
+
+### 11.1 Cadre de validation
+
+La validation doit être fondée sur des preuves adaptées à l'affirmation vérifiée et aux conséquences possibles d'une erreur.
+
+Elle doit distinguer ce qui a été inspecté, testé, observé, démontré et officiellement accepté.
+
+**Principe directeur : « Valider selon les preuves réellement disponibles et proportionner le niveau de validation aux conséquences d'une erreur. »**
+
+### 11.2 Critères de conformité constitutionnelle
+
+Une activité, décision, document ou implémentation est conforme à la Constitution lorsqu'il respecte les principes, autorités et exigences constitutionnelles réellement applicables à son contexte.
+
+La conformité ne doit pas être évaluée par une simple présence documentaire.
+
+**Principe directeur : « Une activité ou une décision est constitutionnellement conforme lorsqu'elle respecte les principes, autorités et exigences de la Constitution qui lui sont réellement applicables. »**
+
+### 11.3 Types de validation
+
+Les validations peuvent être complémentaires et ne doivent pas être confondues.
+
+#### 11.3.1 Validation technique
+
+La validation technique démontre par essais, mesures, inspections ou autres preuves appropriées le comportement technique revendiqué.
+
+**Principe directeur : « Démontrer par des essais, mesures, inspections ou autres preuves appropriées que le comportement technique revendiqué est réellement obtenu. »**
+
+#### 11.3.2 Validation documentaire
+
+La validation documentaire vérifie que la documentation significative représente suffisamment l'état, les décisions et connaissances qu'elle prétend conserver.
+
+**Principe directeur : « Vérifier que la documentation significative représente suffisamment l'état, les décisions et les connaissances qu'elle prétend conserver. »**
+
+#### 11.3.3 Validation de gouvernance
+
+La validation de gouvernance vérifie que les responsabilités, autorités, exceptions et processus applicables ont été respectés.
+
+**Principe directeur : « Vérifier qu'une action ou décision respecte les autorités, responsabilités et mécanismes de gouvernance qui lui sont applicables. »**
+
+#### 11.3.4 Validation des décisions officielles
+
+Une décision officielle exige l'acceptation explicite de l'autorité compétente. Les preuves techniques peuvent éclairer cette décision sans s'y substituer.
+
+**Principe directeur : « Une décision ne devient officielle que lorsque l'autorité appropriée l'a explicitement acceptée selon le niveau de preuve et de compréhension requis. »**
+
+#### 11.3.5 Validation des composants universels
+
+Un composant universel doit être validé en tenant compte de sa portée commune, de ses interfaces et des conséquences de sa réutilisation.
+
+**Principe directeur : « Exiger d'un composant universel des preuves adaptées à sa portée commune et aux conséquences que sa réutilisation peut produire dans plusieurs systèmes. »**
+
+### 11.4 Revues obligatoires
+
+Une revue doit être obligatoire lorsque son absence pourrait permettre à une erreur significative de progresser vers une étape plus coûteuse ou risquée.
+
+La nature de la revue doit correspondre au risque : technique, architecturale, documentaire, de sécurité, de gouvernance ou physique selon le cas.
+
+**Principe directeur : « Imposer une revue lorsqu'un point de contrôle est nécessaire pour empêcher qu'une erreur significative progresse vers une étape où elle serait plus coûteuse ou risquée. »**
+
+### 11.5 Non-conformité, remédiation et blocage
+
+Une non-conformité doit rendre visible l'écart entre l'état observé et l'exigence applicable.
+
+La remédiation doit être proportionnée à sa cause et à ses conséquences. Un blocage est justifié lorsque poursuivre créerait un risque ou invaliderait une étape suivante.
+
+**Principe directeur : « Rendre l'écart visible, corriger proportionnellement sa cause et empêcher sa progression lorsque les conséquences possibles justifient un blocage. »**
+
+### 11.6 Preuves, attestations et auditabilité
+
+Une validation significative doit laisser suffisamment de preuves pour comprendre ce qui a été vérifié, par quelle méthode, avec quel résultat et dans quelles limites.
+
+Une attestation ou un statut ne remplace pas les preuves qui le justifient.
+
+**Principe directeur : « Une validation importante doit laisser suffisamment de preuves pour comprendre ultérieurement ce qui a été vérifié, comment, avec quel résultat et dans quelles limites. »**
+
+## 12. Évolution de la plateforme
+
+### 12.1 Principe d'amélioration continue
+
+HTD-DP doit évoluer lorsque l'expérience, les besoins ou les technologies révèlent une amélioration utile.
+
+L'évolution ne doit pas provoquer une reconstruction inutile des fondations qui demeurent comprises, utiles et validées.
+
+**Principe directeur : « Faire évoluer HTD-DP lorsque l'expérience et les besoins le justifient, sans reconstruire inutilement les fondations qui demeurent valides. »**
+
+### 12.2 Boucle d'amélioration de HTD-DP
+
+Les observations issues des projets et systèmes doivent pouvoir remonter vers les connaissances, méthodes, standards, composants et outils de HTD-DP.
+
+Toute amélioration doit être introduite au niveau approprié à sa portée.
+
+**Principe directeur : « Transformer les observations, résultats et apprentissages des développements en améliorations utiles des connaissances, méthodes, composants et capacités de HTD-DP. »**
+
+### 12.3 Processus de modification de la Constitution
+
+Une modification constitutionnelle est réservée aux changements qui affectent réellement les fondations de HTD-DP.
+
+#### 12.3.1 Proposition
+
+La proposition doit identifier la fondation concernée, le changement envisagé et sa raison.
+
+**Principe directeur : « Toute évolution constitutionnelle doit commencer par une proposition explicite identifiant la fondation qu'il est proposé de modifier et la raison du changement. »**
+
+#### 12.3.2 Examen et impact
+
+L'examen doit considérer les conséquences sur les principes, responsabilités, documents subordonnés, systèmes concernés et acquis existants.
+
+**Principe directeur : « Examiner les conséquences d'un changement constitutionnel sur les principes, responsabilités, documents subordonnés et acquis existants avant de l'approuver. »**
+
+#### 12.3.3 Approbation
+
+Une modification constitutionnelle ne devient officielle qu'après une décision explicite de l'autorité humaine compétente.
+
+**Principe directeur : « Une modification constitutionnelle ne devient officielle qu'après une décision explicite de l'autorité humaine compétente. »**
+
+#### 12.3.4 Publication et entrée en vigueur
+
+La nouvelle version doit être identifiable, traçable et publiée de manière à déterminer clairement quand elle devient la version applicable.
+
+**Principe directeur : « Rendre toute nouvelle version identifiable, traçable et explicitement applicable afin qu'il soit possible de savoir quelles fondations gouvernent HTD-DP. »**
+
+### 12.4 Évolution des standards, processus et outils
+
+Les standards, processus et outils doivent pouvoir évoluer sans modification constitutionnelle lorsque les fondations demeurent inchangées.
+
+Le changement doit être réalisé au niveau documentaire correspondant à son autorité réelle.
+
+**Principe directeur : « Faire évoluer chaque élément au niveau documentaire où il appartient sans modifier la Constitution lorsqu'une fondation constitutionnelle n'est pas réellement affectée. »**
+
+### 12.5 Migration, compatibilité et rétroactivité
+
+Les évolutions doivent préserver autant que raisonnablement possible les acquis valides et rendre explicites les ruptures nécessaires.
+
+Une nouvelle règle ne doit pas être considérée automatiquement comme rétroactive lorsqu'une telle application créerait une incohérence ou une conséquence non évaluée.
+
+**Principe directeur : « Maîtriser les transitions entre générations en préservant autant que raisonnablement possible les acquis valides et en rendant explicites les ruptures nécessaires. »**
+
+### 12.6 Indicateurs de maturité et de santé de la plateforme
+
+La maturité de HTD-DP doit être appréciée selon sa capacité réelle à produire des développements compréhensibles, validés, réutilisables, traçables et évolutifs.
+
+La quantité de documents, d'outils ou d'automatisations ne constitue pas à elle seule un indicateur de maturité.
+
+**Principe directeur : « Évaluer la maturité de HTD-DP par sa capacité réelle à produire des développements compréhensibles, validés, réutilisables et évolutifs plutôt que par la quantité d'outils ou de documentation créée. »**
+
+## 13. Dispositions finales
+
+### 13.1 Interprétation officielle
+
+La Constitution doit être interprétée selon l'intention de ses principes et la cohérence de l'ensemble.
+
+Une formulation isolée ne doit pas être utilisée pour contourner une responsabilité ou une protection clairement établie ailleurs dans le document.
+
+Lorsqu'une ambiguïté significative demeure, elle doit être traitée comme une question de gouvernance.
+
+**Principe directeur : « Interpréter la Constitution selon ses principes, son intention et la cohérence de l'ensemble plutôt qu'en isolant une formulation de son contexte. »**
+
+### 13.2 Entrée en vigueur
+
+Une version devient applicable lorsqu'elle est officiellement approuvée, publiée et identifiable comme version en vigueur.
+
+Les versions de travail ou propositions ne doivent pas être confondues avec l'autorité constitutionnelle en vigueur.
+
+**Principe directeur : « Une version de la Constitution devient applicable lorsqu'elle est officiellement approuvée, publiée et identifiable comme version en vigueur. »**
+
+### 13.3 Primauté de la Constitution
+
+La Constitution constitue l'autorité documentaire fondatrice de HTD-DP.
+
+Tout standard, cadre, processus, procédure, règle d'outil ou implémentation subordonnée doit demeurer compatible avec elle. Lorsqu'une contradiction est identifiée, elle doit être résolue au niveau approprié plutôt que masquée par l'usage.
+
+**Principe directeur : « La Constitution constitue l'autorité documentaire fondatrice de HTD-DP; tout document, règle, processus ou implémentation subordonné doit demeurer compatible avec elle. »**
+
+### 13.4 Glossaire
+
+Les termes structurants de HTD-DP doivent conserver une signification suffisamment claire pour éviter qu'une variation de vocabulaire modifie implicitement une règle.
+
+Le glossaire peut être enrichi lorsque de nouveaux termes durables apparaissent, sans transformer des détails techniques temporaires en concepts constitutionnels.
+
+Termes fondamentaux :
+
+-   **Autorité** : capacité reconnue de rendre une décision officielle
+dans un domaine donné.
+-   **Validation** : établissement d'un niveau de confiance fondé sur
+des preuves adaptées à l'affirmation vérifiée.
+-   **Agent IA** : système d'intelligence artificielle participant à des
+activités de HTD-DP dans les limites de ses capacités et autorisations.
+-   **Composant universel** : capacité commune officiellement reconnue
+pour une réutilisation dans plusieurs systèmes HTD.
+-   **Knowledge Base** : espace de conservation des connaissances
+durables qui ne remplace pas les sources normatives.
+-   **Laboratoire** : environnement destiné à l'expérimentation, à la
+mesure et à la validation avant une intégration opérationnelle appropriée.
+-   **Production / environnement opérationnel** : contexte où une
+capacité est utilisée pour remplir sa fonction réelle et où les conséquences de son comportement doivent être maîtrisées.
+
+**Principe directeur : « Les termes structurants doivent conserver une signification suffisamment claire et cohérente pour éviter que des différences d'interprétation modifient implicitement les principes de HTD-DP. »**
+
+### 13.5 Index des principes, règles et workflows
+
+Les principes, règles et workflows doivent pouvoir être retrouvés par leurs numéros de section et leurs intitulés officiels.
+
+Un index ou outil de navigation peut faciliter leur découverte, mais ne devient pas une source d'autorité indépendante. En cas de divergence, le texte constitutionnel de la version en vigueur prévaut.
+
+**Principe directeur : « Les éléments normatifs importants doivent pouvoir être retrouvés et reliés à leur source d'autorité sans créer une seconde source de vérité parallèle. »**
+
+### 13.6 Références et documents subordonnés
+
+Les documents subordonnés doivent préciser leur relation avec la Constitution lorsqu'ils exercent une autorité dérivée de celle-ci.
+
+La liste des documents subordonnés peut évoluer sans nécessiter une modification constitutionnelle lorsque leur ajout ne modifie pas les fondations de HTD-DP.
+
+Les conventions, standards, processus et règles d'outils doivent référencer les sections constitutionnelles pertinentes lorsque cette relation améliore la compréhension et la traçabilité.
+
+**Principe directeur : « Les documents subordonnés précisent et appliquent la Constitution dans leur domaine; leur référencement doit préserver clairement la hiérarchie d'autorité. »**
