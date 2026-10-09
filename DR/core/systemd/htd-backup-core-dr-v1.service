@@ -1,0 +1,6 @@
+[Unit]
+Description=HTD Core Disaster Recovery V1 backup
+
+[Service]
+Type=oneshot
+ExecStart=/opt/htd/scripts/backup_core_dr_v1.sh

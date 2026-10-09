@@ -1,0 +1,10 @@
+[Unit]
+Description=Run HTD Core Disaster Recovery V1 backup nightly
+
+[Timer]
+OnCalendar=*-*-* 01:15:00
+Persistent=true
+RandomizedDelaySec=0
+
+[Install]
+WantedBy=timers.target
