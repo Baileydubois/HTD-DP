@@ -8,6 +8,8 @@ from datetime import datetime
 
 BACKUP_ROOT = "/opt/htd/backups/dev_agent"
 STAGING_ROOT = f"{BACKUP_ROOT}/staging"
+# Restriction temporaire : seul un fichier de ce répertoire peut être actif.
+TRIAL_ACTIVE_DIR = ("var", "tmp", "htd-deployment-v1-trial")
 
 # Exécuté sur l'Edge. Les ouvertures utilisent O_NOFOLLOW.
 # Le fichier actif est remplacé par renameat dans le même répertoire.
@@ -684,6 +686,34 @@ def remote_path_problem(path):
     return None
 
 
+def trial_active_path_allowed(path):
+    if not isinstance(path, str) or "\x00" in path:
+        return False
+    if not path.startswith("/") or path.endswith("/"):
+        return False
+    parts = path.split("/")
+    if parts[0] != "":
+        return False
+    body = parts[1:]
+    if any(part in ("", ".", "..") for part in body):
+        return False
+    if len(body) != len(TRIAL_ACTIVE_DIR) + 1:
+        return False
+    if tuple(body[:-1]) != TRIAL_ACTIVE_DIR:
+        return False
+    return True
+
+
+def active_path_problem(path):
+    if trial_active_path_allowed(path):
+        return None
+    return (
+        33,
+        "Chemin actif refusé : seul un fichier de "
+        "/var/tmp/htd-deployment-v1-trial/ est autorisé.",
+    )
+
+
 def path_has_dot_component(path):
     normalized = str(path).replace("\\", "/")
     for part in normalized.split("/"):
@@ -1319,6 +1349,12 @@ def main():
         print("[ERREUR]")
         print(path_problem[1])
         return path_problem[0]
+
+    scope_problem = active_path_problem(remote_path)
+    if scope_problem is not None:
+        print("[ERREUR]")
+        print(scope_problem[1])
+        return scope_problem[0]
 
     mode = "plan"
     local_candidate = None
