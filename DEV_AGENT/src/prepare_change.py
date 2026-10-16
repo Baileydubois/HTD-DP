@@ -1329,6 +1329,13 @@ def print_usage():
         "<utilisateur@adresse> <fichier_distant> "
         "--apply <fichier_local>"
     )
+    print()
+    print("ROLLBACK contrôlé :")
+    print(
+        "python prepare_change.py "
+        "<utilisateur@adresse> <fichier_distant> "
+        "--rollback <chemin_backup>"
+    )
 
 
 def main():
