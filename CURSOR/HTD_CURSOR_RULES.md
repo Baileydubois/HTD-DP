@@ -3,12 +3,14 @@
 |                         |                                                                 |
 | ----------------------- | --------------------------------------------------------------- |
 | **Statut**              | Règles opérationnelles officielles                              |
-| **Version**             | 1.1.0                                                           |
-| **Date**                | 2026-09-18                                                      |
+| **Version**             | 1.2.0                                                           |
+| **Date**                | 2026-10-25                                                      |
 | **Autorités supérieures** | `MASTER/HTD_DEVELOPMENT_CONSTITUTION.md`                      |
 |                         | `DEV_AGENT/HTD_DEV_AGENT_CONVENTION.md`                         |
 
 ---
+
+La version 1.1.0 datait du 2026-09-18. La version 1.2.0 ajoute la consultation proportionnée des documents d'autorité.
 
 ## 1. Autorité et rôle
 
@@ -53,6 +55,18 @@ Avant toute modification, vérifier l'état réel du dépôt (`git status`). Ne 
 Si des changements non liés existent déjà, les identifier, ne pas les écraser ni les intégrer silencieusement, et les signaler lorsqu'ils peuvent affecter la tâche.
 
 Si une incertitude empêche d'agir de façon suffisamment sûre, la signaler avant de poursuivre.
+
+### 2.1 Documents d'autorité
+
+Avant une modification, nommer les documents qui gouvernent le changement et lire seulement ceux qui s'y appliquent.
+
+Avant une modification structurante, lire la hiérarchie de la section 1, les entrées concernées de `DOCUMENTS/DECISION_LOG.md` et, pour HTD Edge, `docs/HTD_EDGE_ARCHITECTURE.md` puis `docs/HTD_ARCHITECTURE_VISION.md`.
+
+Un correctif local ne déclenche pas la lecture intégrale de la Constitution.
+
+Une orientation approuvée pour le développement futur, ou un classement FUTUR, n'autorise pas son implémentation.
+
+Lorsqu'un document d'autorité nécessaire est inaccessible, le signaler et ne pas poursuivre une modification structurante sans validation humaine.
 
 ---
 
