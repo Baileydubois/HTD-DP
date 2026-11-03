@@ -196,3 +196,240 @@ Le chemin de sorties déjà présent dans HTD Edge n'est pas redéfini comme HTD
 ### Justification
 
 Ces orientations sont conservées comme direction de développement. Leur présence dans le journal ne prouve pas qu'un fichier du dépôt les réalise.
+
+## HDR-0005 — Validation fonctionnelle Machine Builder V1 et DR
+
+**Date :** 2026-10-30
+
+**Statut :** Approuvée
+
+### Décision
+
+Machine Builder V1 est validé sur HTD Edge : création réelle de `lab_obs_stride` en intention `observe`, GET et PATCH, filtrage Observer, magasin YAML `0640`, sauvegarde DR réelle COMPLETE/SUCCESS du 30 octobre 2026 à 14:47:47 EDT, manifeste SHA-256 12/12, restauration isolée hors production.
+
+Le texte de référence est `docs/HTD_MACHINE_BUILDER_V1.md` dans le dépôt HTD-EDGE, ID `htd_machine_builder_v1_functional_dr_validated`. Cette entrée enregistre l'approbation. Elle n'en recopie pas le détail.
+
+Cette validation n'autorise pas :
+
+- une restauration complète en production ;
+- le contrôle physique ;
+- l'installation PWA ;
+- un nouveau cycle DR ;
+- le contact PLC.
+
+La prochaine priorité enregistrée est la reprise de l'acquisition Allen-Bradley réelle, lecture seule, cinq tags CompactLogix 1769-L16ER-BB1B, en conservant la chaîne déjà développée et validée hors ligne. Ce n'est pas une autorisation d'implémentation ni de communication industrielle. Une étape ultérieure distincte est requise.
+
+HDR-0002 demeure. L'architecture produit et HDR-0004 ne sont pas modifiées.
+
+### Justification
+
+L'approbation humaine du 30 octobre 2026 ne doit pas rester seulement dans une conversation. Le journal conserve la décision et renvoie au document.
+
+## HDR-0006 — Checkpoint réseau Edge Option B, trois NIC physiques
+
+**Date :** 2026-10-31
+
+**Statut :** Approuvée
+
+**ID :** `htd_edge_network_option_b_three_physical_nics_validated_v1`
+
+### Décision
+
+Le réseau industriel Option B de HTD Edge est enregistré comme checkpoint Master. La configuration permanente suivante a été validée le 31 octobre 2026, RESULT=PASS à 19:15:24 EDT, retour arrière désarmé.
+
+- CLIENT : `enp0s31f6` — `192.168.1.124/24`
+- STRIDE : `enx9c69d340b5bf` — `192.168.50.1/24`
+- PLC : `enx9c69d3be1405` — `192.168.123.250/24`
+- MAC PLC : `9c:69:d3:be:14:05`
+- CompactLogix raccordé en Ethernet direct, lien 100 Mb/s Full Duplex
+- `systemd-networkd` : trois interfaces configurées
+- Netplan PLC permanent : `/etc/netplan/60-htd-plc-enx9c69d3be1405.yaml`
+
+Cette entrée enregistre l'état réseau validé. Pendant cette validation, aucun ping, aucune session CIP, aucune lecture de tags et aucune écriture PLC n'ont été effectués.
+
+Cette validation n'autorise pas :
+
+- un ping vers le CompactLogix ;
+- une session CIP ou une ouverture TCP `192.168.123.24:44818` ;
+- une lecture de tags ;
+- une écriture PLC ;
+- un changement de mode automate ;
+- le déploiement d'un service PLC ;
+- une modification Machine Builder, Observer ou Points.
+
+Une autorisation humaine ultérieure, distincte de ce checkpoint, reste exigée pour le premier contact d'identité CIP.
+
+HDR-0002 demeure. HDR-0005 n'est pas modifiée. L'architecture produit et HDR-0004 ne sont pas modifiées.
+
+### Justification
+
+La validation humaine du réseau Option B du 31 octobre 2026 ne doit pas rester seulement dans une conversation. Le journal conserve le checkpoint et ses limites.
+
+## HDR-0007 — Checkpoint d'identification CIP réelle CompactLogix
+
+**Date :** 2026-11-01
+
+**Statut :** Approuvée
+
+**ID :** `htd_ab_compactlogix_real_identity_validated_v1`
+
+### Décision
+
+L'identification CIP réelle du CompactLogix 1769-L16ER-BB1B est enregistrée comme checkpoint Master. Le deuxième essai, RESULT=PASS, a été effectué le 1er novembre 2026, horodatage `2026-11-02T01:57:36.761769Z`, une seule tentative, session fermée.
+
+- Source : `192.168.123.250`, interface `enx9c69d3be1405`
+- CompactLogix : `192.168.123.24:44818`
+- Bibliothèque : `pycomm3==1.2.16`
+- Identité confirmée : vendor `1`, product type `14`, product code `153`, révision `33.14`, série `60e1bf5b`
+- Journal : `/home/hydrotech/htd-plc-sim-lab/essai-2/identity-observe/observation.json`
+- SHA256 : `7c39444c476073a023af8af9fb5cd055ffc6beda6c75306ea8c78f49edc0baf5`
+- Premier essai `REFUSEE` / `identite_ambigue` conservé, SHA256 `dce22ac36b865ec17e1cf2a00a1d4e9c93efb176c9823d316bb8c854fbf79494`
+
+Cette entrée enregistre l'identité observée et comparée. Elle n'autorise pas :
+
+- une lecture réelle des cinq tags ;
+- une écriture PLC ;
+- un changement de mode automate ;
+- une publication HTD Points ;
+- un service d'acquisition régulier ;
+- un contact CIP supplémentaire.
+
+Une autorisation humaine ultérieure, distincte de ce checkpoint, reste exigée pour la première lecture réelle des cinq tags.
+
+HDR-0002 demeure. HDR-0005 n'est pas modifiée. HDR-0006 n'est pas modifiée. L'architecture produit et HDR-0004 ne sont pas modifiées.
+
+### Justification
+
+La validation humaine de l'identité CIP du 1er novembre 2026 ne doit pas rester seulement dans une conversation. Le journal conserve le checkpoint, ses preuves et ses limites.
+
+## HDR-0008 — Checkpoint de première lecture réelle de cinq tags CompactLogix
+
+**Date :** 2026-11-01
+
+**Statut :** Approuvée
+
+**ID :** `htd_ab_compactlogix_five_tags_real_read_validated_v1`
+
+### Décision
+
+La première acquisition ponctuelle réelle des cinq tags du CompactLogix 1769-L16ER-BB1B, programme `HTD_PLC_SIM_V1`, est enregistrée comme checkpoint Master. L'essai, RESULT=PASS, a été effectué le 1er novembre 2026 à 21:35 HNE, horodatage d'acquisition `2026-11-02T02:35:44Z`, une seule session, une seule tentative, fermeture confirmée.
+
+- Source : `192.168.123.250`, interface `enx9c69d3be1405`
+- CompactLogix : `192.168.123.24:44818`
+- Identité CIP conforme : vendor `1`, product type `14`, product code `153`, révision `33.14`, série `60e1bf5b`
+- `HTD_Pression` REAL = `79.0`, quality `good`
+- `HTD_Temperature` REAL = `44.5`, quality `good`
+- `HTD_Debit` REAL = `28.0`, quality `good`
+- `HTD_Pompe_Run` BOOL = `true`, quality `good`
+- `HTD_Defaut` BOOL = `true`, quality `good`
+- Journal : `/home/hydrotech/htd-plc-sim-lab/tag-observe/observation.json`
+- SHA256 : `46d9640e366f16815b9114a062631fe0e445cb77fc86cd088bae6df56f2e8029`
+
+Ces valeurs proviennent de tags internes du programme `HTD_PLC_SIM_V1`. Elles ne prouvent pas un capteur ou un actionneur physique.
+
+Cette entrée enregistre la lecture ponctuelle observée. Elle n'autorise pas :
+
+- une écriture PLC ;
+- un changement de mode automate ;
+- une commande physique ;
+- un service d'acquisition régulier ;
+- une publication HTD Points ou Observer ;
+- un contact CIP supplémentaire.
+
+Une autorisation humaine ultérieure, distincte de ce checkpoint, reste exigée pour toute nouvelle communication industrielle.
+
+HDR-0002 demeure. HDR-0005 n'est pas modifiée. HDR-0006 n'est pas modifiée. HDR-0007 n'est pas modifiée. L'architecture produit et HDR-0004 ne sont pas modifiées.
+
+### Justification
+
+La validation humaine de la première lecture réelle des cinq tags du 1er novembre 2026 ne doit pas rester seulement dans une conversation. Le journal conserve le checkpoint, ses preuves et ses limites.
+
+## HDR-0009 — Checkpoint d'acquisition Allen-Bradley réelle bornée CompactLogix
+
+**Date :** 2026-11-02
+
+**Statut :** Approuvée
+
+**ID :** `htd_ab_compactlogix_bounded_real_acquisition_validated_v1`
+
+### Décision
+
+L'acquisition Allen-Bradley réelle bornée du CompactLogix 1769-L16ER-BB1B, programme `HTD_PLC_SIM_V1`, est enregistrée comme checkpoint Master. Le deuxième essai borné, RESULT=PASS, a été effectué le 2 novembre 2026 à 21:37 HNE, horodatage d'acquisition `2026-11-03T02:37:38Z`, dans le répertoire distinct `bounded-real-2`.
+
+- Source : `192.168.123.250`, interface `enx9c69d3be1405`
+- CompactLogix : `192.168.123.24:44818`
+- Identité CIP conforme : vendor `1`, product type `14`, product code `153`, révision `33.14`, série `60e1bf5b`
+- Cycles tentés : `5` ; cycles réussis : `5`
+- Durée : `4,049` secondes ; arrêt : `limite_cycles`
+- Sessions fermées ; permis consommé ; grant fermé ; variables d'autorisation désarmées
+- `HTD_Pression` REAL = `73.0`, quality `good`
+- `HTD_Temperature` REAL = `21.5`, quality `good`
+- `HTD_Debit` REAL = `16.0`, quality `good`
+- `HTD_Pompe_Run` BOOL = `true`, quality `good`
+- `HTD_Defaut` BOOL = `false`, quality `good`
+- Journal : `/home/hydrotech/htd-plc-sim-lab/bounded-real-2/`
+- Rapport SHA256 : `67267e97e4df1d42b5570470d8e799a7241fbbf1ce3876aac626e4753a89cfbb`
+- Premier essai borné `bounded-real-1` (FAIL, cinq `identite_ambigue`) conservé intégralement
+
+Ces valeurs proviennent de tags internes du programme `HTD_PLC_SIM_V1`. Elles ne prouvent pas un capteur ou un actionneur physique.
+
+Cette entrée enregistre une acquisition bornée validée, limitée à cinq cycles ou trente secondes. Elle n'autorise pas :
+
+- un service d'acquisition permanent ;
+- une preuve de reconnexion après panne réelle ;
+- une écriture PLC ;
+- un changement de mode automate ;
+- une commande physique ;
+- une publication HTD Points ou Observer de production ;
+- un contact CIP supplémentaire.
+
+Une autorisation humaine ultérieure, distincte de ce checkpoint, reste exigée pour toute nouvelle communication industrielle.
+
+HDR-0002 demeure. HDR-0005 n'est pas modifiée. HDR-0006 n'est pas modifiée. HDR-0007 n'est pas modifiée. HDR-0008 n'est pas modifiée. L'architecture produit et HDR-0004 ne sont pas modifiées.
+
+### Justification
+
+La validation humaine du deuxième essai réel borné du 2 novembre 2026 ne doit pas rester seulement dans une conversation. Le journal conserve le checkpoint, ses preuves et ses limites.
+
+## HDR-0010 — Checkpoint d'intégration catalogue 13 Points et raccordement resolver Allen-Bradley
+
+**Date :** 2026-11-03
+
+**Statut :** Approuvée
+
+**ID :** `htd_edge_ab_points_production_catalog_resolver_integration_v1`
+
+### Décision
+
+L'intégration en production du catalogue HTD Points à 13 Points et le raccordement du resolver actif au chemin PLC Allen-Bradley dédié sont enregistrés comme checkpoint Master. La validation finale hors CIP a été confirmée le 3 novembre 2026 (HNE), avec `FINAL_VALIDATION_PASS` et journal d'installation `DROPIN_INSTALL_PASS` sous `/home/hydrotech/htd-plc-sim-lab/points13-dropin-install-20261103T232619Z/`.
+
+Faits validés :
+
+- Catalogue actif `/opt/htd/core/config/points.yaml` : 13 Points ; SHA256 `ecd3ed6e7ec227adcd16be51077018cf6f81e72df30f12c4db9606a1e943613d`
+- Huit Points STRIDE préservés, qualité `good` via `/api/points` ; `motor_current` source `ai3`
+- Cinq Points Allen-Bradley configurés (`ab:bench_l16/HTD_*`) : qualité `unavailable`, provenance `state_absent` ; fichier `/home/hydrotech/htd-plc-sim-lab/ab-acquire/plc_state.json` absent
+- Service `htd-point-resolver` : `active` ; environnement chargé `HTD_PLC_STATE_PATH=/home/hydrotech/htd-plc-sim-lab/ab-acquire/plc_state.json` et `HTD_PLC_STALE_SEC=5`
+- Drop-in `/etc/systemd/system/htd-point-resolver.service.d/ab-plc-state.conf` : contenu limité à ces deux variables ; SHA256 `7c5b211df975529f14805578e802dbfd8098f8e65ffa64d4a41608a58da51364`
+- Service `htd-ab-acquire` : `disabled` / `inactive` ; aucune acquisition CIP continue validée dans ce checkpoint
+- Sauvegarde catalogue 8 Points et artefacts : `/home/hydrotech/htd-plc-sim-lab/backups/points13-deploy-20261103T050040Z/` (SHA catalogue avant `189ea592873be1a02538b1cf55a8579daaa3966e50a7c8f19ffee87a943a9aad`)
+- `/api/points` : `status=ok`, 13 Points
+- Services de contrôle physique observés actifs sans redémarrage lors de la validation finale : `htd-runtime`, `htd-runtime-bridge`, `htd-do-apply`, `htd-action`, `htd-io`
+- `/var/www/html` : mtime inchangé lors des contrôles de déploiement ; aucun changement Observer enregistré dans ce checkpoint
+- Aucune écriture PLC ni commande physique dans ce checkpoint
+
+Cette entrée n'autorise pas :
+
+- le démarrage ou l'activation de `htd-ab-acquire` ;
+- une acquisition CIP régulière ou continue ;
+- une écriture PLC ou une commande physique ;
+- un changement réseau, Netplan, plafond F_FIT V1.3 ou SessionChannel ;
+- une modification Machine Builder ;
+- une modification d'Observer.
+
+Une autorisation humaine ultérieure, distincte de ce checkpoint, reste exigée pour toute acquisition Allen-Bradley réelle régulière.
+
+HDR-0002 demeure. HDR-0005 n'est pas modifiée. HDR-0006 n'est pas modifiée. HDR-0007 n'est pas modifiée. HDR-0008 n'est pas modifiée. HDR-0009 n'est pas modifiée. L'architecture produit et HDR-0004 ne sont pas modifiées.
+
+### Justification
+
+La validation humaine du raccordement catalogue 13 Points et resolver du 3 novembre 2026 ne doit pas rester seulement dans une conversation. Le journal conserve le checkpoint, ses preuves et ses limites.
