@@ -433,3 +433,55 @@ HDR-0002 demeure. HDR-0005 n'est pas modifiée. HDR-0006 n'est pas modifiée. HD
 ### Justification
 
 La validation humaine du raccordement catalogue 13 Points et resolver du 3 novembre 2026 ne doit pas rester seulement dans une conversation. Le journal conserve le checkpoint, ses preuves et ses limites.
+
+## HDR-0011 — Checkpoint d'essai supervisé réel bout en bout vers HTD Points
+
+**Date :** 2026-11-03
+
+**Statut :** Approuvée
+
+**ID :** `htd_ab_supervised_real_end_to_end_points_validated_v1`
+
+### Décision
+
+Le premier essai supervisé réel Allen-Bradley de bout en bout, avec publication vers le chemin HTD Points déjà raccordé (HDR-0010), est enregistré comme checkpoint Master. L'essai unique `supervised-real-1`, RESULT=PASS, a été effectué le 3 novembre 2026 (HNE), horodatages UTC `2026-11-04T02:12:20Z` à `2026-11-04T02:12:24Z`.
+
+Faits validés :
+
+- Runtime : `run_supervised_real` ; pilote réutilisé `HtdSimLogixTags` (HDR-0009)
+- Source : `192.168.123.250`, interface `enx9c69d3be1405`
+- CompactLogix : `192.168.123.24:44818` ; programme `HTD_PLC_SIM_V1`
+- Identité CIP conforme : vendor `1`, product type `14`, product code `153`, révision `33.14`, série `60e1bf5b` ; `identity_stop=None`
+- Cycles tentés : `5` ; cycles réussis : `5` ; durée : `4,06` secondes ; arrêt : `limite_cycles`
+- Publication atomique sous `/home/hydrotech/htd-plc-sim-lab/ab-acquire/plc_state.json`
+- Dernières valeurs publiées : `HTD_Pression` REAL=`57.0`, `HTD_Temperature` REAL=`23.5`, `HTD_Debit` REAL=`24.0`, `HTD_Pompe_Run` BOOL=`false`, `HTD_Defaut` BOOL=`false` ; qualité fichier `good` ; ts `2026-11-04T02:12:24Z`
+- `/api/points` pendant la fraîcheur : cinq Points AB (`htd_pression`, `htd_temperature`, `htd_debit`, `htd_pompe_run`, `htd_defaut`) observés `good` avec valeurs
+- Après expiration `HTD_PLC_STALE_SEC=5` : les cinq Points AB observés `unavailable` (valeurs null) ; aucune preuve `reason=stale` n'est affirmée ici
+- Huit Points STRIDE non perturbés ; `motor_current` source `ai3`, qualité `good`
+- Permis oneshot consommé ; grant fermé ; variables `HTD_AB_SERVICE`, `HTD_AB_SERVICE_ARM`, `HTD_AB_SUPERVISED`, `HTD_AB_ENABLE_REAL` désarmées
+- Session CIP fermée ; aucun processus d'acquisition restant
+- Service `htd-ab-acquire` : `disabled` / `inactive` ; `ExecStart=/bin/false`
+- Journal : `/home/hydrotech/htd-plc-sim-lab/supervised-real-1/essai-report.json`
+- Rapport SHA256 : `545e207dc8b8993452ee963d7469eb965ed10552c3a431a30c726c8ed191a287`
+- SHA256 runtime `ab_acquire_supervised.py` : `9311b9f1c56f03fa7cfe7f25bfc1bd00177d3ee268af172d007b3991e5c3c7ad`
+- SHA256 pilote `ab_htd_sim_tag_driver.py` : `d6df237c2a71f78e80cb36bd1c82345937ef59f85c9b12f7c5ba2d38cc639634`
+
+Ces valeurs proviennent de tags internes du programme `HTD_PLC_SIM_V1` sur matériel CompactLogix réel. Elles ne prouvent pas un capteur ou un actionneur physique.
+
+Cette entrée enregistre un essai unique borné (cinq cycles ou trente secondes). Elle n'autorise pas :
+
+- un fonctionnement continu prolongé ;
+- un service d'acquisition permanent ni l'activation de `htd-ab-acquire` ;
+- une écriture PLC ;
+- un changement de mode automate ;
+- une commande physique ;
+- un changement réseau, plafond F_FIT V1.3, SessionChannel ou Observer ;
+- un contact CIP supplémentaire.
+
+Une autorisation humaine ultérieure, distincte de ce checkpoint, reste exigée pour toute nouvelle communication industrielle.
+
+HDR-0002 demeure. HDR-0005 n'est pas modifiée. HDR-0006 n'est pas modifiée. HDR-0007 n'est pas modifiée. HDR-0008 n'est pas modifiée. HDR-0009 n'est pas modifiée. HDR-0010 n'est pas modifiée. L'architecture produit et HDR-0004 ne sont pas modifiées.
+
+### Justification
+
+La validation humaine du premier essai supervisé réel bout en bout vers HTD Points du 3 novembre 2026 ne doit pas rester seulement dans une conversation. Le journal conserve le checkpoint, ses preuves et ses limites.
