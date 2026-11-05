@@ -539,3 +539,60 @@ HDR-0002 demeure. HDR-0005 n'est pas modifiée. HDR-0006 n'est pas modifiée. HD
 ### Justification
 
 La validation humaine du premier essai prolongé réel Allen-Bradley du 3 novembre 2026 ne doit pas rester seulement dans une conversation. Le journal conserve le checkpoint, ses preuves et ses limites.
+
+## HDR-0013 — Checkpoint du premier essai réel Allen-Bradley sous systemd (oneshot borné)
+
+**Date :** 2026-11-04
+
+**Statut :** Approuvée
+
+**ID :** `htd_ab_supervised_systemd_real_oneshot_v1`
+
+### Décision
+
+Le premier essai réel d'acquisition Allen-Bradley lancé par systemd, borné et oneshot, est enregistré comme checkpoint Master. VALIDÉ SUR HTD EDGE RÉEL. L'essai unique via `htd-ab-acquire.supervised.service`, RESULT=PASS, a été effectué le 4 novembre 2026 (HNE), profil court cinq cycles ou trente secondes.
+
+Faits validés :
+
+- Service : `htd-ab-acquire.supervised.service` ; un seul `systemctl start` ; `EXECUTE_EXIT_CODE=0`
+- Runtime : `run_supervised_real` ; CLI `--systemd-bounded` ; pilote réutilisé `HtdSimLogixTags`
+- Profil : `htd_plc_sim_v1_lab` ; plafonds `max_cycles=5`, `max_duration_s=30`
+- Source : `192.168.123.250`, interface `enx9c69d3be1405`
+- CompactLogix 1769-L16ER-BB1B : `192.168.123.24:44818` ; programme interne `HTD_PLC_SIM_V1`
+- Identité CIP exigée et respectée : vendor `1`, product type `14`, product code `153`, révision `33.14`, série `60e1bf5b`
+- Cycles : `5/5` ; arrêt : `limite_cycles`
+- systemd : `Result=success` ; `ExecMainStatus=0` ; `NRestarts=0`
+- Chaîne : CompactLogix → acquisition AB supervisée → `plc_state.json` → HTD Point Resolver → `/api/points`
+- Catalogue : 13 Points présents
+- Pendant la fraîcheur : cinq Points Allen-Bradley `good` ; huit Points STRIDE `good`, sans régression (`motor_current` / `ai3` préservés)
+- Après expiration : cinq Points AB `unavailable`, conforme
+- Dernières valeurs observées : `HTD_Pression` REAL=`51.0`, `HTD_Temperature` REAL=`20.5`, `HTD_Debit` REAL=`12.0`, `HTD_Pompe_Run` BOOL=`false`, `HTD_Defaut` BOOL=`false`
+- Lecture seule des cinq tags ; aucune écriture PLC ni commande physique
+- Après essai : service supervisé `disabled` / `inactive` ; service legacy `disabled` / `inactive` (`ExecStart=/bin/false`)
+- Aucun processus d'acquisition restant ; aucun redémarrage automatique
+- Permis oneshot consommé ; marqueur `STARTED` conservé ; `arm.env` retiré ; drop-in `/etc` retiré ; watchdog temporaire absent
+- Journal systemd : PASS, `cycles=5`, `stop_reason=limite_cycles`
+- SHA256 runtime `ab_acquire_supervised.py` : `ff9e9fa12fd4b86e39d20db3848e398cd9bd9294ab98ae96bf62d20eff0f1521`
+- SHA256 unité installée : `70a97d085a789d48c2da7aa8c8d0db88255e9207496c5d770a74d0d0e4413369`
+- SHA256 fichier AB après essai : `9bc9d63988d121b2b0c28dfd0108402ce931f7b75489d4f3c3b8240ff713985d`
+- Répertoire des preuves : `/home/hydrotech/htd-plc-sim-lab/supervised-systemd-real-1/`
+
+Ces valeurs proviennent de tags internes du programme `HTD_PLC_SIM_V1` sur matériel CompactLogix réel. Elles ne prouvent pas un capteur ou un actionneur physique.
+
+Cette entrée enregistre un démarrage borné sous systemd (cinq cycles ou trente secondes). Elle n'autorise pas :
+
+- un service d'acquisition permanente ;
+- une reprise automatique après déconnexion réelle ;
+- un fonctionnement pendant plusieurs jours ;
+- une écriture PLC ou une commande physique ;
+- une installation industrielle chez un client ;
+- l'`enable` permanent de `htd-ab-acquire.supervised.service` ou le démarrage du service legacy ;
+- un contact CIP supplémentaire.
+
+Une autorisation humaine ultérieure, distincte de ce checkpoint, reste exigée pour toute nouvelle communication industrielle.
+
+HDR-0002 demeure. HDR-0005 n'est pas modifiée. HDR-0006 n'est pas modifiée. HDR-0007 n'est pas modifiée. HDR-0008 n'est pas modifiée. HDR-0009 n'est pas modifiée. HDR-0010 n'est pas modifiée. HDR-0011 n'est pas modifiée. HDR-0012 n'est pas modifiée. L'architecture produit et HDR-0004 ne sont pas modifiées.
+
+### Justification
+
+La validation humaine du premier essai réel Allen-Bradley sous systemd du 4 novembre 2026 ne doit pas rester seulement dans une conversation. Le journal conserve le checkpoint, ses preuves et ses limites.
